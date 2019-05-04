@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8ca57cb77fb53a41b9fe1d2566272d9, type: 3}
+  m_Name: TileDirections1
+  m_EditorClassIdentifier: 
+  Tiles:
+  - {fileID: 11400000, guid: 882722ef106b542478a0c087b199c653, type: 2}
+  - {fileID: 11400000, guid: f54a1f2fafcd6ce4a9ef7c01f460e788, type: 2}
+  - {fileID: 11400000, guid: 983730dda93603a4fb32a1f487b9e751, type: 2}
+  - {fileID: 11400000, guid: 2cd960fee72e7f94999388be794b3f1c, type: 2}
+  - {fileID: 11400000, guid: 21da12e1d498ee0438e68fab32fc837a, type: 2}
+  - {fileID: 11400000, guid: 7adc987dc1bb24b4abdb1c5dfb6e41e6, type: 2}
+  - {fileID: 11400000, guid: f7ae33896e15b1a47a30bb0701679728, type: 2}
+  - {fileID: 11400000, guid: 5ece871030638ef44a93ce8b51765f8a, type: 2}
+  - {fileID: 11400000, guid: dbdbf85e1e8702f4a8d5ca6ed2b58cd6, type: 2}
+  CompletePuzzle:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
