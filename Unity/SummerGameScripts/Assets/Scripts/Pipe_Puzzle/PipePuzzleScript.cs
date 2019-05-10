@@ -36,6 +36,7 @@ public class PipePuzzleScript : MonoBehaviour
         }
         else
         {
+            Debug.Log("Begin Not Connected");
             FlowsThroughAll = false;
         }
         Num = Pipes.Pipes.Count + 2;

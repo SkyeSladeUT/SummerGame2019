@@ -1,20 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Experimental.UIElements;
 
 public class DragAndRotate : MonoBehaviour
 {
 	//To be put on an empty game object with the object as a child
-	private Vector3 screenPoint, curScreenPoint, curPosition, offset;
+	private Vector3 screenPoint, curScreenPoint, curPosition, offset, pos;
 	private float ObjectZ;
 	private bool canDrag;
 	private Transform _rotateObject;
+	public UnityEvent OnChange;
+	public float Scale;
+	public GameObject pipeObject;
 
 	private void Start()
 	{
 		_rotateObject = GetComponentInChildren<Transform>();
 		canDrag = false;
+		gameObject.transform.parent = pipeObject.transform;
 	}
 
 
@@ -22,12 +27,17 @@ public class DragAndRotate : MonoBehaviour
 	{
 		canDrag = true;
 		ObjectZ = transform.localPosition.z;
-		screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.localPosition);
+		pos = transform.localPosition;
+		//Debug.Log(pos);
+		//Debug.Log(pos * Scale);
+		screenPoint = Camera.main.WorldToScreenPoint(pos);
 		offset.Set(screenPoint.x - Input.mousePosition.x, screenPoint.y - Input.mousePosition.y, 0);
 		yield return new WaitForSeconds(.1f);
 		if (!canDrag)
 		{
 			_rotateObject.Rotate(0,-90,0);
+			yield return new WaitForSeconds(.2f);
+			OnChange.Invoke();
 		}
 	}
 	
@@ -43,8 +53,10 @@ public class DragAndRotate : MonoBehaviour
 		}
 	}
 
-	private void OnMouseUp()
+	private IEnumerator OnMouseUp()
 	{
 		canDrag = false;
+		yield return new WaitForSeconds(.2f);
+		OnChange.Invoke();
 	}
 }

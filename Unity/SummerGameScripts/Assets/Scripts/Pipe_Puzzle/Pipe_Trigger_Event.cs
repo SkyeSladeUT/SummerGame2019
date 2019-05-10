@@ -7,7 +7,7 @@ public class Pipe_Trigger_Event : MonoBehaviour
     private PipeObject pipe;
     private PipeEntrance entrance;
     private int num;
-    public bool A;
+    public bool A, connected;
     public int pipeNum;
     public PipeListData Pipes;
 
@@ -32,7 +32,7 @@ public class Pipe_Trigger_Event : MonoBehaviour
             Debug.Log("ConnectEnd");
             other.GetComponent<Pipe_End_Objects>().entrance.isConnected = true;
             other.GetComponent<Pipe_End_Objects>().entrance.pipeConnectionNum = pipeNum;
-            entrance.Connect(0);
+            entrance.Connect(0);   
         }
         else
         {
@@ -40,7 +40,10 @@ public class Pipe_Trigger_Event : MonoBehaviour
             entrance.Connect(num);
             entrance.isConnected = true;
         }
-        
+
+        connected = true;
+        //Debug.Log("Connect " + pipeNum);
+
     }
 
     private void OnTriggerExit(Collider other)
@@ -53,5 +56,7 @@ public class Pipe_Trigger_Event : MonoBehaviour
         }
         entrance.unConnect();
         entrance.isConnected = false;
+        connected = false;
+        //Debug.Log("unconnect " + pipeNum);
     }
 }

@@ -10,7 +10,6 @@ public class SnapScript : MonoBehaviour
 
     private void Start()
     {
-        _objectZ = transform.localPosition.z;
         onPuzzle = false;
     }
     
@@ -22,7 +21,7 @@ public class SnapScript : MonoBehaviour
             onPuzzle = true;
         }
         if(other.CompareTag("snapPosition"))
-            _snapPosition = other.transform.localPosition;
+            _snapPosition = other.transform.position;
     }
 
     private void OnTriggerExit(Collider other)
@@ -37,8 +36,8 @@ public class SnapScript : MonoBehaviour
     {
         if (onPuzzle)
         {
-            _snapPosition.z = _objectZ;
-            transform.localPosition = _snapPosition;
+            //_snapPosition.z = _objectZ;
+            transform.position = _snapPosition;
         }
     }
 }

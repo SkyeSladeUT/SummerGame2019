@@ -6,25 +6,44 @@ using UnityEngine.UI;
 public class CharacterMovement : MonoBehaviour
 {
 
+    public Player_Object player;
+ 
     private MovePattern _current;
-    public MovePattern Walk, Run;
+    //public MovePattern Walk, Run;
     private CharacterController _controller;
-    public KeyCodeData Sprint;
+
+    private bool enabled;
+    //public KeyCodeData Sprint;
 
     private void Start()
     {
         _controller = GetComponent<CharacterController>();
-        _current = Walk;
+        enabled = true;
+        EnableCC();
     }
 
     private void FixedUpdate()
     {
-        if (Sprint.KeyDown())
-            _current = Run;
-        else if (Sprint.KeyUp())
-            _current = Walk;
-        _current.Invoke(_controller, transform);
+        if (enabled)
+        {
+            _current = player.Current;
+            _current.Invoke(_controller, transform);
+        }
     }
+
+    public void DisableCC()
+    {
+        _controller.enabled = false;
+        enabled = false;
+    }
+
+    public void EnableCC()
+    {
+        _controller.enabled = true;
+        enabled = true;
+    }
+    
+    
 
     
 

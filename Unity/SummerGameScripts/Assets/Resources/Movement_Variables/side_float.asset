@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7ba057170adbde34f803e2558ebf6b24, type: 3}
-  m_Name: side
+  m_Name: side_float
   m_EditorClassIdentifier: 
-  value: 1
+  value: 3
   InputType: Horizontal
