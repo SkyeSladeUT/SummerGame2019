@@ -12,7 +12,7 @@ public class DragAndRotate : MonoBehaviour
 	private bool canDrag;
 	private Transform _rotateObject;
 	public UnityEvent OnChange;
-	public float Scale;
+	//public float Scale;
 	public GameObject pipeObject;
 
 	private void Start()
@@ -36,7 +36,7 @@ public class DragAndRotate : MonoBehaviour
 		if (!canDrag)
 		{
 			_rotateObject.Rotate(0,-90,0);
-			yield return new WaitForSeconds(.2f);
+			yield return new WaitForSeconds(.1f);
 			OnChange.Invoke();
 		}
 	}

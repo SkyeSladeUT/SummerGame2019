@@ -39,6 +39,12 @@ public class Nav_Mesh_Controller : MonoBehaviour
         StartCoroutine(GoToDest());
     }
 
+    public void Walk_Back()
+    {
+        _agent.speed = walkSpeed;
+        StartCoroutine(WalkBackwards());
+    }
+
     public void Run()
     {
         _agent.speed = runSpeed;
@@ -60,6 +66,31 @@ public class Nav_Mesh_Controller : MonoBehaviour
         ReachedDestination.Invoke();
         print("Done");
         
+    }
+
+    private IEnumerator WalkBackwards()
+    {
+        _agent.updateRotation=false; // disable the automatic rotation
+        while(true)
+        {
+            Vector3 direc = Vector3.zero;
+            //then i need to prevent the difference from beeing too big (in case one is at 10 and the other 350 for example)
+            if (Mathf.Abs(direc.y-transform.eulerAngles.y)>180)
+            {
+                if(direc.y<180)
+                    direc.y+=360;
+                else
+                    direc.y-=360;
+            }
+            transform.eulerAngles = Vector3.Lerp(transform.eulerAngles, direc, Time.deltaTime);
+            yield return new WaitForFixedUpdate();
+            if (((_agent.transform.position.z <= (_destination + offset).z) &&
+                 (_agent.transform.position.x <= (_destination + offset).x))
+                && ((_agent.transform.position.z >= (_destination - offset).z) &&
+                    (_agent.transform.position.x >= (_destination - offset).x)))
+                break;
+        }
+        _agent.updateRotation=true; //when no longer need to step back then go to normal
     }
 
     private void OnTriggerEnter(Collider other)

@@ -54,6 +54,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Camera_Controller.cs" t="Include" />
           <e p="Camera_Switch.cs" t="Include" />
           <e p="Change_Movement.cs" t="Include" />
           <e p="DataObjects" t="Include">
@@ -74,9 +75,13 @@
           <e p="Movement_Scripts" t="Include">
             <e p="AnimationScript.cs" t="Include" />
             <e p="CameraFollow.cs" t="Include" />
+            <e p="Character_Movement_JoystickConf.cs" t="Include" />
             <e p="CharacterMovement.cs" t="Include" />
+            <e p="Joystick_Move_Pattern.cs" t="Include" />
             <e p="MovePattern.cs" t="Include" />
             <e p="Nav_Mesh_Controller.cs" t="Include" />
+            <e p="Sprint_script.cs" t="Include" />
+            <e p="Transform_Controller.cs" t="Include" />
           </e>
           <e p="NPC_Scripts" t="Include">
             <e p="dialouge_objects.cs" t="Include" />
@@ -100,7 +105,7 @@
             <e p="Slide_Tile_Object.cs" t="Include" />
             <e p="Slide_Tiles.cs" t="Include" />
           </e>
-          <e p="Sprint_script.cs" t="Include" />
+          <e p="viewing_spot_trigger.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Change_Movement : StateMachineBehaviour
 {
-    public MovePattern  New;
+    public Joystick_Move_Pattern  New;
     public Player_Object player;
     
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

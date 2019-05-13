@@ -4,6 +4,6 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Player_Object : ScriptableObject
 {
-    public MovePattern Current;
+    public Joystick_Move_Pattern Current;
     
 }

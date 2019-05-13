@@ -9,6 +9,7 @@ TagManager:
   - PipeEnd
   - NPC
   - Puzzle
+  - ViewSpot
   layers:
   - Default
   - TransparentFX

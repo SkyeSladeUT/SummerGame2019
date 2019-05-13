@@ -5,4 +5,14 @@ using UnityEngine;
 public class BoolData : ScriptableObject
 {
     public bool value;
+
+    public void setTrue()
+    {
+        value = true;
+    }
+
+    public void setFalse()
+    {
+        value = false;
+    }
 }

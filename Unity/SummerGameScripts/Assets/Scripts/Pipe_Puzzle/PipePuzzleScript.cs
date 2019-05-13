@@ -42,18 +42,18 @@ public class PipePuzzleScript : MonoBehaviour
         Num = Pipes.Pipes.Count + 2;
         while (FlowsThroughAll && _currPipe > 0 && Num > 0)
         {
-           Debug.Log("Num Times: " + Num);
-           Debug.Log("Curr: " + _currPipe);
+           //Debug.Log("Num Times: " + Num);
+           //Debug.Log("Curr: " + _currPipe);
            if(Pipes.Pipes[_currPipe-1].IsConnected())
            {
-              Debug.Log("Is Connected");
+              //Debug.Log("Is Connected");
                temp = _currPipe;
               _currPipe = Pipes.Pipes[_currPipe - 1].IsConnectedTo(_prevPipe);
               _prevPipe = temp;
            }
            else
            {
-               Debug.Log("Not Connected");
+               //Debug.Log("Not Connected");
                FlowsThroughAll = false;
            }
 

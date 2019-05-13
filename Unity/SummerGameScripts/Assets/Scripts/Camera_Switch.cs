@@ -7,6 +7,7 @@ public class Camera_Switch : MonoBehaviour
 {
     private CinemachineMixingCamera MixCam;
     private int CamActive;
+    public float CamSpeed;
     private void Start()
     {
         CamActive = 0;
@@ -37,8 +38,8 @@ public class Camera_Switch : MonoBehaviour
     {
         while (MixCam.GetWeight(EndCam) < 1)
         {
-            MixCam.SetWeight(StartCam, MixCam.GetWeight(StartCam) - .5f*Time.deltaTime);
-            MixCam.SetWeight(EndCam, MixCam.GetWeight(EndCam) + .5f*Time.deltaTime);
+            MixCam.SetWeight(StartCam, MixCam.GetWeight(StartCam) - CamSpeed*Time.deltaTime);
+            MixCam.SetWeight(EndCam, MixCam.GetWeight(EndCam) + CamSpeed*Time.deltaTime);
             yield return new WaitForFixedUpdate();
         }
 

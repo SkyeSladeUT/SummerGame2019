@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aaae8a70babff224eb92c0fcac104c50, type: 3}
-  m_Name: PLayer
+  m_Script: {fileID: 11500000, guid: cd5038f5ef72caa4db62ca171fba7281, type: 3}
+  m_Name: automatic_rotate
   m_EditorClassIdentifier: 
-  Current: {fileID: 11400000, guid: fd23ac4957ef5d845abcadc4b55f42ca, type: 2}
+  value: 0
