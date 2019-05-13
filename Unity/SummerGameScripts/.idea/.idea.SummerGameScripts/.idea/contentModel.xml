@@ -106,6 +106,7 @@
             <e p="PipePuzzleScript.cs" t="Include" />
             <e p="Single_Pipe_Object.cs" t="Include" />
           </e>
+          <e p="Set_Start_Destination.cs" t="Include" />
           <e p="Slide_Tiles_Puzzle" t="Include">
             <e p="Set_Tile_Text.cs" t="Include" />
             <e p="Slide_Directions.cs" t="Include" />

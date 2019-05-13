@@ -4,7 +4,7 @@ using UnityEngine;
 [CreateAssetMenu (menuName = "CharacterController/Joystick_Move_Pattern")]
 public class Joystick_Move_Pattern : ScriptableObject
 {
-    public FloatData TurnSpeed, MoveSpeed;
+    public FloatData TurnSpeed, MoveSpeed, Gravity;
     float GravityEffect;
     public string HorizontalAxis, VerticalAxis;
     Vector2 InputAxes;
@@ -24,6 +24,9 @@ public class Joystick_Move_Pattern : ScriptableObject
         CalculateDirection (InputAxes.x, InputAxes.y);
         Rotate ();
         Movement = transform.forward * MoveSpeed.Value * Time.deltaTime;
+        //controller.Move(Movement);
+        if (!controller.isGrounded)
+            Movement.y -= Gravity.Value * Time.deltaTime;
         controller.Move(Movement);
     }
 
@@ -34,6 +37,9 @@ public class Joystick_Move_Pattern : ScriptableObject
         CalcDirection(angle);
         Rotate ();
         Movement = transform.forward * MoveSpeed.Value * Time.deltaTime;
+        //controller.Move(Movement);
+        if(!controller.isGrounded)
+            Movement.y -= Gravity.Value * Time.deltaTime;
         controller.Move(Movement);
     }
  

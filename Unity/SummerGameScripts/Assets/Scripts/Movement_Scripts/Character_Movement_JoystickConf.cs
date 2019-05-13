@@ -20,9 +20,11 @@ public class Character_Movement_JoystickConf : MonoBehaviour
     private bool CRRunning;
     public TransformData target;
     public BoolData ReachedDestination;
+    public Vector3Data Load_Destination;
  
     void Start()
     {
+        
         CRRunning = false;
         offset.Set(.1f, .1f, .1f);
         _controller = GetComponent<CharacterController> ();
@@ -194,6 +196,11 @@ public class Character_Movement_JoystickConf : MonoBehaviour
         {
             target.trans = other.transform.Find("ViewingSpot");
         }
+    }
+
+    public void LoadDest()
+    {
+        transform.position = Load_Destination.vector;
     }
     
     

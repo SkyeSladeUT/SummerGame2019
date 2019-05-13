@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurnSpeed: {fileID: 11400000, guid: b214412182f7733459f73d3dc908fda9, type: 2}
   MoveSpeed: {fileID: 11400000, guid: 4a1b89aa06c8a2c4a9c03df635f5e2eb, type: 2}
+  Gravity: {fileID: 11400000, guid: b4903a1e482224142b47b3ad8b831c56, type: 2}
   HorizontalAxis: Horizontal
   VerticalAxis: Vertical

@@ -103,9 +103,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1702018694}
+  - component: {fileID: 734486027}
+  - component: {fileID: 734486025}
+  - component: {fileID: 734486028}
   m_Layer: 0
   m_Name: ViewingSpot
-  m_TagString: Untagged
+  m_TagString: ViewSpot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,12 +121,54 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1702018693}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.31, y: -9.4, z: -25.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -2.31, y: -8.1, z: -27.4}
+  m_LocalScale: {x: 0.31197405, y: 1.0172538, z: 0.31197405}
   m_Children: []
   m_Father: {fileID: 2506672168458311615}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &734486027
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702018693}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &734486025
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702018693}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 116.20761, y: 2.0367827, z: 6.2986026}
+  m_Center: {x: 6.3469477, y: 0.5183915, z: 1.2612609}
+--- !u!114 &734486028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702018693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05eb7761b3a7e62458304212f4439947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Reach_Destination: {fileID: 11400000, guid: a64146d323fa3c847b81c5995cd24b16, type: 2}
 --- !u!1 &1789854102
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,7 +726,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  Scale: 0.5
   pipeObject: {fileID: 2506672166721997340}
 --- !u!54 &2506672166783992259
 Rigidbody:
@@ -1436,7 +1480,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  Scale: 0.5
   pipeObject: {fileID: 2506672166721997340}
 --- !u!54 &2506672166947852232
 Rigidbody:
@@ -1999,7 +2042,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  Scale: 0.5
   pipeObject: {fileID: 2506672166721997340}
 --- !u!54 &2506672167242902689
 Rigidbody:
@@ -2229,7 +2271,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  Scale: 0.5
   pipeObject: {fileID: 2506672166721997340}
 --- !u!54 &2506672167272190371
 Rigidbody:
@@ -3483,7 +3524,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  Scale: 0.5
   pipeObject: {fileID: 2506672166721997340}
 --- !u!54 &2506672167524612264
 Rigidbody:
@@ -3591,7 +3631,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  Scale: 0.5
   pipeObject: {fileID: 2506672166721997340}
 --- !u!54 &2506672167601768597
 Rigidbody:
@@ -5132,7 +5171,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  Scale: 0.5
   pipeObject: {fileID: 2506672166721997340}
 --- !u!54 &2506672167969462595
 Rigidbody:
@@ -6359,7 +6397,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  Scale: 0.5
   pipeObject: {fileID: 2506672166721997340}
 --- !u!54 &2506672168411390628
 Rigidbody:
@@ -6558,7 +6595,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  Scale: 0.5
   pipeObject: {fileID: 2506672166721997340}
 --- !u!54 &2506672168454908029
 Rigidbody:
@@ -6614,7 +6650,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2506672168458311614}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.8, y: 1.3, z: 10.3}
+  m_LocalPosition: {x: 12.8, y: 1.05, z: 10.3}
   m_LocalScale: {x: 0.1503, y: 0.1503, z: 0.1503}
   m_Children:
   - {fileID: 2506672167969033529}
@@ -6683,11 +6719,22 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Side_Control
+          m_StringArgument: No_Control
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 0}
-        m_MethodName: DisableCC
+        m_MethodName: DisableAgent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: ef346431995518a4a8542c61a30d30d5, type: 2}
+        m_MethodName: setTrue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6698,7 +6745,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 0}
-        m_MethodName: EnableAgent
+        m_MethodName: WalkBack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6709,8 +6756,68 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 0}
-        m_MethodName: Walk
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Walk_Back
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  ExitPuzzle:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: ef346431995518a4a8542c61a30d30d5, type: 2}
+        m_MethodName: setFalse
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Walk_Control
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: ToCam1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1096422116}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6721,6 +6828,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  inPuzzleMode: {fileID: 11400000, guid: ef346431995518a4a8542c61a30d30d5, type: 2}
 --- !u!65 &1096422116
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6732,8 +6840,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 33.292683, y: 15.112137, z: 17.472973}
-  m_Center: {x: -1.226171, y: 0.045424845, z: -3.736495}
+  m_Size: {x: 19.64919, y: 15.112137, z: 12.400487}
+  m_Center: {x: -2.9783964, y: 0.045424845, z: -8.612213}
 --- !u!1 &2506672168469628736
 GameObject:
   m_ObjectHideFlags: 0
@@ -6844,7 +6952,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  Scale: 0.5
   pipeObject: {fileID: 2506672166721997340}
 --- !u!54 &2506672168475408512
 Rigidbody:
