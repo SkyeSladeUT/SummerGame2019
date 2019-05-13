@@ -18,7 +18,7 @@ public class Character_Movement_JoystickConf : MonoBehaviour
     public float RotationFloat, SpeedFloat;
     private bool enabled;
     private bool CRRunning;
-    public GameObject target;
+    public TransformData target;
     public BoolData ReachedDestination;
  
     void Start()
@@ -63,9 +63,9 @@ public class Character_Movement_JoystickConf : MonoBehaviour
         Debug.Log("Walk");
         ReachedDestination.value = false;
         angle = 180;
-        _destination = target.transform.position;
+        _destination = target.trans.position;
         _destination.y = transform.position.y;
-        _rotation = target.transform.rotation;
+        _rotation = target.trans.rotation;
         _direction = _destination - transform.position;
         CRRunning = true;
         StartCoroutine(TurnAround(RotationFloat, SpeedFloat, false));
@@ -85,9 +85,9 @@ public class Character_Movement_JoystickConf : MonoBehaviour
         Debug.Log("Walk_Back");
         ReachedDestination.value = false;
         angle = 180;
-        _destination = target.transform.position;
+        _destination = target.trans.position;
         _destination.y = transform.position.y;
-        _rotation = target.transform.rotation;
+        _rotation = target.trans.rotation;
         _direction = _destination - transform.position;
         CRRunning = true;
         StartCoroutine(TurnAround(RotationFloat, -SpeedFloat, true));
@@ -187,10 +187,13 @@ public class Character_Movement_JoystickConf : MonoBehaviour
         transform.position = _destination;
         transform.rotation = _rotation;
     }
-
-    public void FreezeAll()
+    
+    private void OnTriggerEnter(Collider other)
     {
-      
+        if (other.CompareTag("Puzzle"))
+        {
+            target.trans = other.transform.Find("ViewingSpot");
+        }
     }
     
     

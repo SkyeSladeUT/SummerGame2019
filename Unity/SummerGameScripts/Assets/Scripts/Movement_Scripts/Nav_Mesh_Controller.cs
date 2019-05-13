@@ -93,12 +93,5 @@ public class Nav_Mesh_Controller : MonoBehaviour
         _agent.updateRotation=true; //when no longer need to step back then go to normal
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Puzzle"))
-        {
-            _destination = other.transform.Find("ViewingSpot").position;
-            _destination.y = transform.position.y;
-        }
-    }
+    
 }

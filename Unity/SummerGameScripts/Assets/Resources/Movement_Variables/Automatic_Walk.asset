@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d18f31deae6593449ba21f163b64ae6c, type: 3}
-  m_Name: Run_Movement
+  m_Name: Automatic_Walk
   m_EditorClassIdentifier: 
-  TurnSpeed: {fileID: 11400000, guid: b214412182f7733459f73d3dc908fda9, type: 2}
-  MoveSpeed: {fileID: 11400000, guid: 2727e4b96f1d6ed46a17c0352dfef76d, type: 2}
+  TurnSpeed: {fileID: 11400000, guid: 26c3873f0ac9cd74989f9d6f623a9221, type: 2}
+  MoveSpeed: {fileID: 11400000, guid: 934037fc3d678294c9c7e17fa1d58c3d, type: 2}
   HorizontalAxis: Horizontal
   VerticalAxis: Vertical

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Walk_Movement
   m_EditorClassIdentifier: 
   TurnSpeed: {fileID: 11400000, guid: 41af586e98fbeb843959f70fe7b6a4a4, type: 2}
-  MoveSpeed: {fileID: 11400000, guid: 73191083ff0cc1246a2950aa39515251, type: 2}
+  MoveSpeed: {fileID: 11400000, guid: 2514584c7b592e24dac94cbc546d1673, type: 2}
   HorizontalAxis: Horizontal
   VerticalAxis: Vertical
