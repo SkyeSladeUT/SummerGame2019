@@ -1,0 +1,16 @@
+0#
+CafeOwner@
+~Hello, how can I help you?<
+
+You@
+~I need to get into the back.<
+
+CafeOwner@
+~I can't let you back there, only employees are allowed.<
+
+You@
+~But I'm the police.<
+
+CafeOwner@
+~I don't care. If you're not planning on buying anything, then get out.>
+%
