@@ -35,7 +35,7 @@ public class Joystick_Move_Pattern : ScriptableObject
         transform = trans;
         cam = MainCam;
         CalcDirection(angle);
-        Rotate ();
+        //Rotate ();
         Movement = transform.forward * MoveSpeed.Value * Time.deltaTime;
         //controller.Move(Movement);
         if(!controller.isGrounded)
@@ -56,8 +56,10 @@ public class Joystick_Move_Pattern : ScriptableObject
 
     void CalcDirection(float angle)
     {
-        angle = Mathf.Rad2Deg * angle;
-        angle += cam.eulerAngles.y;
+        TargetRotation = transform.rotation;
+        TargetRotation.y = angle;
+        Debug.Log("Angle: " +  angle);
+        transform.rotation = Quaternion.Slerp(transform.rotation, TargetRotation, TurnSpeed.value * Time.deltaTime);
     }
  
     void Rotate() {

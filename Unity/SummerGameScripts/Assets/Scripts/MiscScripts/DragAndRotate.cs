@@ -6,13 +6,11 @@ using UnityEngine.Experimental.UIElements;
 
 public class DragAndRotate : MonoBehaviour
 {
-	//To be put on an empty game object with the object as a child
 	private Vector3 screenPoint, curScreenPoint, curPosition, offset, pos;
 	private float ObjectZ;
 	private bool canDrag;
 	private Transform _rotateObject;
 	public UnityEvent OnChange;
-	//public float Scale;
 	public GameObject pipeObject;
 
 	private void Start()
@@ -28,8 +26,6 @@ public class DragAndRotate : MonoBehaviour
 		canDrag = true;
 		ObjectZ = transform.localPosition.z;
 		pos = transform.localPosition;
-		//Debug.Log(pos);
-		//Debug.Log(pos * Scale);
 		screenPoint = Camera.main.WorldToScreenPoint(pos);
 		offset.Set(screenPoint.x - Input.mousePosition.x, screenPoint.y - Input.mousePosition.y, 0);
 		yield return new WaitForSeconds(.1f);
@@ -41,7 +37,6 @@ public class DragAndRotate : MonoBehaviour
 		}
 	}
 	
-
 	void OnMouseDrag()
 	{
 		if (canDrag)
