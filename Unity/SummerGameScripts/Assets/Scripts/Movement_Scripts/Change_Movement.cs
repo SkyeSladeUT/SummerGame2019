@@ -7,10 +7,13 @@ public class Change_Movement : StateMachineBehaviour
 {
     public Joystick_Move_Pattern  New;
     public Player_Object player;
+    public BoolData incontrol;
+    public bool setcontrol;
     
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player.Current = New;
+        incontrol.value = setcontrol;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

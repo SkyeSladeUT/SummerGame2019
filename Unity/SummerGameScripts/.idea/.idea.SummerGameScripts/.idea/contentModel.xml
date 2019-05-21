@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Owner\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_SummerGameScripts.-1525158960.00" t="ExcludeRecursive" />
-    <e p="E:\School\Summer2019\SummerGame2019\Unity\SummerGameScripts" t="IncludeRecursive">
+    <e p="C:\Users\Owner\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_SummerGameScripts.712639932.00" t="ExcludeRecursive" />
+    <e p="E:\School\Summer2019\ProjectManagmentSummer2019\Unity Project\SummerGameScripts" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="NPC_Controller.cs" t="Include" />
         <e p="packages" t="Include">
           <e p="NavMeshComponents" t="Include">
             <e p="Editor" t="Include">
@@ -60,13 +59,15 @@
             <e p="Camera_Controller.cs" t="Include" />
             <e p="Camera_Switch.cs" t="Include" />
           </e>
-          <e p="Change_Scene.cs" t="Include" />
           <e p="DataObjects" t="Include">
+            <e p="ActionObject.cs" t="Include" />
             <e p="BoolData.cs" t="Include" />
             <e p="BoolInput.cs" t="Include" />
+            <e p="DebugObject.cs" t="Include" />
             <e p="FloatData.cs" t="Include" />
             <e p="FloatInput.cs" t="Include" />
             <e p="FloatInputAxis.cs" t="Include" />
+            <e p="IntData.cs" t="Include" />
             <e p="KeyCodeData.cs" t="Include" />
             <e p="KeyCodeDataKeys.cs" t="Include" />
             <e p="Player_Object.cs" t="Include" />
@@ -76,10 +77,16 @@
             <e p="Vector3Data.cs" t="Include" />
           </e>
           <e p="MiscScripts" t="Include">
+            <e p="ActionModifier.cs" t="Include" />
+            <e p="Change_Rigidbody_Script.cs" t="Include" />
+            <e p="Change_Scene.cs" t="Include" />
             <e p="DeacvtivateSnapAreas.cs" t="Include" />
             <e p="DragAndRotate.cs" t="Include" />
             <e p="EventsScript.cs" t="Include" />
             <e p="Interact_with_object.cs" t="Include" />
+            <e p="Move_Script.cs" t="Include" />
+            <e p="OnTriggerWIthPLayerEvent.cs" t="Include" />
+            <e p="Pause_Script.cs" t="Include" />
             <e p="SnapScript.cs" t="Include" />
             <e p="viewing_spot_trigger.cs" t="Include" />
           </e>
@@ -92,6 +99,8 @@
             <e p="Joystick_Move_Pattern.cs" t="Include" />
             <e p="MovePattern.cs" t="Include" />
             <e p="Nav_Mesh_Controller.cs" t="Include" />
+            <e p="Push_Script.cs" t="Include" />
+            <e p="Set_Start_Destination.cs" t="Include" />
             <e p="Sprint_script.cs" t="Include" />
             <e p="TestMovementScript.cs" t="Include" />
             <e p="Transform_Controller.cs" t="Include" />
@@ -99,10 +108,10 @@
           <e p="NPC_Scripts" t="Include">
             <e p="dialouge_objects.cs" t="Include" />
             <e p="dialouge_script.cs" t="Include" />
+            <e p="NPC_Controller.cs" t="Include" />
             <e p="NPC_object.cs" t="Include" />
             <e p="ReadFile.cs" t="Include" />
           </e>
-          <e p="OnTriggerWIthPLayerEvent.cs" t="Include" />
           <e p="Pipe_Puzzle" t="Include">
             <e p="Pipe_End_Objects.cs" t="Include" />
             <e p="Pipe_Trigger_Event.cs" t="Include" />
@@ -112,13 +121,13 @@
             <e p="PipePuzzleScript.cs" t="Include" />
             <e p="Single_Pipe_Object.cs" t="Include" />
           </e>
-          <e p="Set_Start_Destination.cs" t="Include" />
           <e p="Slide_Tiles_Puzzle" t="Include">
             <e p="Set_Tile_Text.cs" t="Include" />
             <e p="Slide_Directions.cs" t="Include" />
             <e p="Slide_Tile_Object.cs" t="Include" />
             <e p="Slide_Tiles.cs" t="Include" />
           </e>
+          <e p="UI_Drag.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />

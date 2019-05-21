@@ -5,16 +5,21 @@ using UnityEngine.Events;
 
 public class Interact_with_object : MonoBehaviour
 {
+    public bool interactOnce = false;
     public KeyCodeData Interact_Keys;
-    private bool _inRange;
+    private bool _inRange, interacted;
     public UnityEvent InteractEvent, ExitPuzzle;
     public BoolData inPuzzleMode;
 
+
     private void Update()
     {
-        if (Interact_Keys.KeyDown() && _inRange && !inPuzzleMode.value)
+        if (interactOnce && interacted)
+            return;
+        else if (Interact_Keys.KeyDown() && _inRange && !inPuzzleMode.value)
         {
             InteractEvent.Invoke();
+            interacted = true;
         }
         else if (Interact_Keys.KeyDown() && inPuzzleMode.value)
         {
@@ -40,4 +45,5 @@ public class Interact_with_object : MonoBehaviour
             _inRange = false;
         }
     }
+    
 }

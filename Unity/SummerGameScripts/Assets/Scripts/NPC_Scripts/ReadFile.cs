@@ -27,11 +27,13 @@ public class ReadFile : ScriptableObject
     _line = "";
     _ignore = false;
     _ignorechar = '/';
-
+    //Debug.Log(_script.Length);
     foreach (char c in _script)
     {
-      if(c == _ignorechar)
+      if (c == _ignorechar)
+      {
         _ignore = !_ignore;
+      }
       if (!_ignore)
       {
         switch (c)
@@ -41,6 +43,7 @@ public class ReadFile : ScriptableObject
           case '%':
             //end script
             _ignore = true;
+            Debug.Log(_conversation.Count);
             return;
           case '~':
             //begin charline
@@ -49,11 +52,13 @@ public class ReadFile : ScriptableObject
             break;
           case '*':
             //end line
+            //Debug.Log(_line);
             _paragraph.Add(_line);
             _line = "";
             break;
           case '<':
             //end paragraph
+            //Debug.Log(_line);
             _paragraph.Add(_line);
             _line = "";
             _dialouge.Add(_paragraph);
@@ -61,13 +66,17 @@ public class ReadFile : ScriptableObject
             break;
           case '>':
             //end conversation
+            //Debug.Log("EndConv");
             _charaConversation.Add(_characterspara);
             _characterspara = new List<string>();
+            //Debug.Log(_line);
             _paragraph.Add(_line);
             _line = "";
             _dialouge.Add(_paragraph);
+            _paragraph = new List<string>();
             _conversation.Add(_dialouge);
             _dialouge = new List<List<string>>();
+            _convNum++;
             break;
           case '#':
             //convNum
@@ -84,6 +93,7 @@ public class ReadFile : ScriptableObject
         }
       }
     }
+    Debug.Log(_convNum);    //PrintList();
   }
 
   public void PrintList()

@@ -60,6 +60,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   New: {fileID: 11400000, guid: fc5262f5ad1b3604fb73818d167d498b, type: 2}
   player: {fileID: 11400000, guid: b1a47cfa172f14d4c9ce832ac2ee1049, type: 2}
+  incontrol: {fileID: 11400000, guid: af5ae53fd4011044f9cd7686627ea32d, type: 2}
+  setcontrol: 0
 --- !u!114 &114597045687003136
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -74,6 +76,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   New: {fileID: 11400000, guid: 41025394b116166408da494af6eb6a23, type: 2}
   player: {fileID: 11400000, guid: b1a47cfa172f14d4c9ce832ac2ee1049, type: 2}
+  incontrol: {fileID: 11400000, guid: af5ae53fd4011044f9cd7686627ea32d, type: 2}
+  setcontrol: 1
 --- !u!114 &114999505663915888
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -88,6 +92,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   New: {fileID: 11400000, guid: fd23ac4957ef5d845abcadc4b55f42ca, type: 2}
   player: {fileID: 11400000, guid: b1a47cfa172f14d4c9ce832ac2ee1049, type: 2}
+  incontrol: {fileID: 11400000, guid: af5ae53fd4011044f9cd7686627ea32d, type: 2}
+  setcontrol: 1
 --- !u!1101 &1101285521039114804
 AnimatorStateTransition:
   m_ObjectHideFlags: 1

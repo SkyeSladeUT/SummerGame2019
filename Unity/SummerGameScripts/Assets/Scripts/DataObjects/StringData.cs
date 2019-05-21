@@ -5,9 +5,11 @@ using UnityEngine;
 public class StringData : ScriptableObject
 {
     public string value;
+    public string prevvalue;
 
     public void SetValue(string name)
     {
+        prevvalue = value;
         value = name;
     }
 
