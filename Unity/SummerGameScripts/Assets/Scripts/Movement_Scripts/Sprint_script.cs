@@ -13,7 +13,7 @@ public class Sprint_script : MonoBehaviour
         Anim = GetComponent<Animator>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if(Sprint_Keys.KeyDown() && inControl.value)
             Anim.SetTrigger("Run_Control");

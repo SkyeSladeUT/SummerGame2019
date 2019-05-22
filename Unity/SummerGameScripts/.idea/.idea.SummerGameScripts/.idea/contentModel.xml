@@ -70,11 +70,21 @@
             <e p="IntData.cs" t="Include" />
             <e p="KeyCodeData.cs" t="Include" />
             <e p="KeyCodeDataKeys.cs" t="Include" />
+            <e p="ListData.cs" t="Include" />
             <e p="Player_Object.cs" t="Include" />
             <e p="StringData.cs" t="Include" />
             <e p="TransformData.cs" t="Include" />
             <e p="UnityKeyCodeObject.cs" t="Include" />
             <e p="Vector3Data.cs" t="Include" />
+          </e>
+          <e p="Inventory" t="Include">
+            <e p="DropDown.cs" t="Include" />
+            <e p="Hover_Pointer_Script.cs" t="Include" />
+            <e p="Inventory.cs" t="Include" />
+            <e p="Inventory_Button_Object.cs" t="Include" />
+            <e p="Inventory_Display.cs" t="Include" />
+            <e p="Item.cs" t="Include" />
+            <e p="Note.cs" t="Include" />
           </e>
           <e p="MiscScripts" t="Include">
             <e p="ActionModifier.cs" t="Include" />
@@ -127,8 +137,8 @@
             <e p="Slide_Tile_Object.cs" t="Include" />
             <e p="Slide_Tiles.cs" t="Include" />
           </e>
-          <e p="UI_Drag.cs" t="Include" />
         </e>
+        <e p="Test.cs" t="Include" />
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="NavMeshComponents.csproj" t="IncludeRecursive" />

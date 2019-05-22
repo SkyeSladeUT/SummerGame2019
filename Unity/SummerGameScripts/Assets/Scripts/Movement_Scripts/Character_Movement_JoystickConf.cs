@@ -14,7 +14,7 @@ public class Character_Movement_JoystickConf : MonoBehaviour
     private Quaternion _rotation;
     private float angle, offsetAngle, walkspeed, rotatespeed;
     public float RotationFloat, SpeedFloat;
-    private bool enabled;
+    //private bool enabled;
     private bool CRRunning;
     public TransformData target;
     public BoolData ReachedDestination;

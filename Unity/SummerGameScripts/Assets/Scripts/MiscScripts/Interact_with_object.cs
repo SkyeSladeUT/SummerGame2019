@@ -12,7 +12,7 @@ public class Interact_with_object : MonoBehaviour
     public BoolData inPuzzleMode;
 
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (interactOnce && interacted)
             return;

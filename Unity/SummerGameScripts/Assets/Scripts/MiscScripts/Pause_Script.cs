@@ -5,12 +5,32 @@ using UnityEngine.Events;
 
 public class Pause_Script : MonoBehaviour
 {
-    public UnityEvent OnPauseScreen;
-    public UnityEvent OnPauseConv;
+    public UnityEvent OnPauseConv, OnPause, OnUnPause;
+    public KeyCodeData Pause_Keys;
+    private bool paused;
 
-    public void PauseScreen()
+    private void Start()
     {
-        OnPauseScreen.Invoke();   
+        paused = false;
+    }
+
+    private void Update()
+    {
+        if (Pause_Keys.KeyDown())
+        {
+            if (!paused)
+            {
+                paused = true;
+                Time.timeScale = 0;
+                OnPause.Invoke();
+            }
+            else
+            {
+                paused = false;
+                Time.timeScale = 1;
+                OnUnPause.Invoke();
+            }
+        }
     }
 
     public void ConversationPause()

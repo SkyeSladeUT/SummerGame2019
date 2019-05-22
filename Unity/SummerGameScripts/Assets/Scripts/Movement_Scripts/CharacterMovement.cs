@@ -16,7 +16,7 @@ public class CharacterMovement : MonoBehaviour
     private Quaternion _rotation;
     private float angle;
     public float RotationFloat, SpeedFloat;
-    private bool enabled; //reachedDestination;
+//    private bool enabled; //reachedDestination;
     public UnityEvent Reach_Destination;
     public GameObject target;
 

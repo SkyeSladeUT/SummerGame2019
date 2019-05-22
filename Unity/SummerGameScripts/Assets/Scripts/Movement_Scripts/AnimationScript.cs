@@ -12,7 +12,7 @@ public class AnimationScript : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (Forward.KeyHold())
         {
