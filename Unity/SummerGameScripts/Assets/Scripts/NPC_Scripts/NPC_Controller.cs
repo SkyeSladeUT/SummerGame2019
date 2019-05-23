@@ -42,11 +42,13 @@ public class NPC_Controller : MonoBehaviour
     {
         while (MovementType.value == "RandomWalkBetween")
         {
+            anim.ResetTrigger("Idle");
             reached_dest = false;
             rotate_dest = false;
             target = transform.position;
             target.x = Random.Range(Destination01.trans.position.x, Destination02.trans.position.x);
             target.z = Random.Range(Destination01.trans.position.z, Destination02.trans.position.z);
+            anim.ResetTrigger("Idle");
             anim.SetTrigger("Walk");
             while (!CheckDest(.1f) && MovementType.value == "RandomWalkBetween")
             {
@@ -68,6 +70,7 @@ public class NPC_Controller : MonoBehaviour
 
     private IEnumerator SidewaysX()
     {
+        anim.ResetTrigger("Idle");
         anim.SetTrigger("Walk");
         _agent.updateRotation = false;
         while (MovementType.value == "SidewaysX")
@@ -89,6 +92,7 @@ public class NPC_Controller : MonoBehaviour
 
     private IEnumerator SidewaysZ()
     {
+        anim.ResetTrigger("Idle");
         anim.SetTrigger("Walk");
         _agent.updateRotation = false;
         while (MovementType.value == "SidewaysZ")
@@ -112,6 +116,7 @@ public class NPC_Controller : MonoBehaviour
 
     private IEnumerator FollowPlayer()
     {
+        anim.ResetTrigger("Idle");
         anim.SetTrigger("Walk");
         while (MovementType.value == "FollowPlayer")
         {
@@ -123,6 +128,7 @@ public class NPC_Controller : MonoBehaviour
 
     private IEnumerator GoToPlayer()
     {
+        anim.ResetTrigger("Idle");
         anim.SetTrigger("Walk");
         reached_dest = false;
         rotate_dest = false;
@@ -145,6 +151,7 @@ public class NPC_Controller : MonoBehaviour
 
     private IEnumerator GoToDest()
     {
+        anim.ResetTrigger("Idle");
         anim.SetTrigger("Walk");
         reached_dest = false;
         rotate_dest = false;

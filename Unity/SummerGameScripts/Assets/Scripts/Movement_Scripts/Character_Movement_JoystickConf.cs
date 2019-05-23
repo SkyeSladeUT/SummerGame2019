@@ -19,11 +19,11 @@ public class Character_Movement_JoystickConf : MonoBehaviour
     public TransformData target;
     public BoolData ReachedDestination;
     public Vector3Data Load_Destination;
+    public QuaternionData Rotation_Destination;
     private Vector3 _destination;
  
     void Start()
     {
-        
         CRRunning = false;
         _controller = GetComponent<CharacterController> ();
         MainCamera = Camera.main.transform;
@@ -48,14 +48,14 @@ public class Character_Movement_JoystickConf : MonoBehaviour
         enabled = true;
     }
 
-    public void WalkTowards()
+    public void WalkTowards(float speed)
     {
-        StartCoroutine(Walk_Towards());
+        StartCoroutine(Walk_Towards(speed));
     }
 
-    public void WalkBack()
+    public void WalkBack(float speed)
     {
-        StartCoroutine(Walk_Backward());
+        StartCoroutine(Walk_Backward(speed));
     }
 
     public void SetPosition()
@@ -67,11 +67,12 @@ public class Character_Movement_JoystickConf : MonoBehaviour
     public void LoadDest()
     {
         transform.position = Load_Destination.vector;
+        transform.rotation = Rotation_Destination.rotation;
     }
 
-    public IEnumerator Walk_Towards()
+    public IEnumerator Walk_Towards(float speed)
     {
-        walkspeed = SpeedFloat / 2;
+        walkspeed = speed;
         rotatespeed = RotationFloat;
         _rotation = target.trans.rotation;
         _rotation.y += 180;
@@ -95,9 +96,9 @@ public class Character_Movement_JoystickConf : MonoBehaviour
     }
     
     
-    public IEnumerator Walk_Backward()
+    public IEnumerator Walk_Backward(float speed)
     {
-        walkspeed = SpeedFloat;
+        walkspeed = speed;
         rotatespeed = RotationFloat;
         ReachedDestination.value = false;
         _rotation = target.trans.rotation;

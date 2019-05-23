@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Cafe Key
   itemDescription: key to the back room of the cafe
-  itemType: Object
+  itemType: Key
   inventoryImage: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}

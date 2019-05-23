@@ -22,8 +22,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f7ae33896e15b1a47a30bb0701679728, type: 2}
   - {fileID: 11400000, guid: 5ece871030638ef44a93ce8b51765f8a, type: 2}
   - {fileID: 11400000, guid: dbdbf85e1e8702f4a8d5ca6ed2b58cd6, type: 2}
-  CompletePuzzle:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  Tile_Action: {fileID: 11400000, guid: c621fe1451af42f44b257279ce80e7ba, type: 2}

@@ -11,7 +11,7 @@ public class dialouge_script : MonoBehaviour
     public Text Dialouge_Text, Character_Text;
     public GameObject Dialouge_Object;
     public KeyCodeData Interact;
-    public IntData ConvNum;
+    public IntData ConvNum, BasicConNum;
     private bool ConvStart, SpeedUp, inRange;
     private int _char, line, paragraph, _conNum;
     private string _text_to_display;
@@ -24,13 +24,14 @@ public class dialouge_script : MonoBehaviour
         inRange = false;
         SpeedUp = false;
         ConvStart = false;
-        ConvNum.value = 0;
+        //ConvNum.value = 0;
         line = 0;
         paragraph = 0;
         character.Initialize();
         Dialouge_Text.text = "";
         Character_Text.text = "";
         Dialouge_Object.SetActive(false);
+        Debug.Log(character.Script.Dialouge.Count);
     }
 
 
@@ -64,6 +65,11 @@ public class dialouge_script : MonoBehaviour
         StartCoroutine(CheckSpeed());
     }
 }
+
+    public void SetToInitialCon()
+    {
+        ConvNum.value = BasicConNum.value;
+    }
 
     private IEnumerator CheckSpeed()
     {

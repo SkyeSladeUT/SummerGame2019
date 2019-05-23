@@ -23,7 +23,7 @@ public class Interact_with_object : MonoBehaviour
         }
         else if (Interact_Keys.KeyDown() && inPuzzleMode.value)
         {
-            ExitPuzzle.Invoke();
+            Exit_Puzzle();
             _inRange = false;
         }
     }
@@ -44,6 +44,11 @@ public class Interact_with_object : MonoBehaviour
             Debug.Log("Out of Range");
             _inRange = false;
         }
+    }
+
+    public void Exit_Puzzle()
+    {
+        ExitPuzzle.Invoke();
     }
     
 }

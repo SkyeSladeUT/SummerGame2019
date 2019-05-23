@@ -49,7 +49,11 @@
           </e>
         </e>
         <e p="Resources" t="Include">
+          <e p="Items" t="Include">
+            <e p="Inventory_Dialouge.cs" t="Include" />
+          </e>
           <e p="Text_Files" t="Include">
+            <e p="Get_Item_01.txt" t="Include" />
             <e p="NPC_01.txt" t="Include" />
             <e p="Test.txt" t="Include" />
           </e>
@@ -72,11 +76,13 @@
             <e p="KeyCodeDataKeys.cs" t="Include" />
             <e p="ListData.cs" t="Include" />
             <e p="Player_Object.cs" t="Include" />
+            <e p="QuaternionData.cs" t="Include" />
             <e p="StringData.cs" t="Include" />
             <e p="TransformData.cs" t="Include" />
             <e p="UnityKeyCodeObject.cs" t="Include" />
             <e p="Vector3Data.cs" t="Include" />
           </e>
+          <e p="Game_Manager_Cafe.cs" t="Include" />
           <e p="Inventory" t="Include">
             <e p="DropDown.cs" t="Include" />
             <e p="Hover_Pointer_Script.cs" t="Include" />
@@ -86,6 +92,7 @@
             <e p="Item.cs" t="Include" />
             <e p="Note.cs" t="Include" />
           </e>
+          <e p="Item_Pickup.cs" t="Include" />
           <e p="MiscScripts" t="Include">
             <e p="ActionModifier.cs" t="Include" />
             <e p="Change_Rigidbody_Script.cs" t="Include" />

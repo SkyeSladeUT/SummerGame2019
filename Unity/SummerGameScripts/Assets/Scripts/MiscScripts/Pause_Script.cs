@@ -5,13 +5,14 @@ using UnityEngine.Events;
 
 public class Pause_Script : MonoBehaviour
 {
-    public UnityEvent OnPauseConv, OnPause, OnUnPause;
-    public KeyCodeData Pause_Keys;
-    private bool paused;
+    public UnityEvent OnPauseConv, OnPause, OnUnPause, OnInventoryEnter, OnInventoryExit;
+    public KeyCodeData Pause_Keys, Inventory_Keys;
+    private bool paused, inventory;
 
     private void Start()
     {
         paused = false;
+        inventory = false;
     }
 
     private void Update()
@@ -29,6 +30,23 @@ public class Pause_Script : MonoBehaviour
                 paused = false;
                 Time.timeScale = 1;
                 OnUnPause.Invoke();
+            }
+        }
+    }
+    
+    private void FixedUpdate()
+    {
+        if (Inventory_Keys.KeyDown())
+        {
+            if (!inventory)
+            {
+                inventory = true;
+                OnInventoryEnter.Invoke();
+            }
+            else
+            {
+                inventory = false;
+                OnInventoryExit.Invoke();
             }
         }
     }

@@ -7,12 +7,13 @@ using UnityEngine.Windows;
 public class ReadFile : ScriptableObject
 {
   public TextAsset Script;
-  private List<List<List<string>>> _conversation;
+  public List<List<List<string>>> _conversation;
   private string _script, _line;
   private int  _convNum;
   private List<string> _characterNames;
   private List<string> _characterspara, _paragraph;
-  private List<List<string>> _dialouge, _charaConversation;
+  private List<List<string>> _dialouge;
+  public List<List<string>> _charaConversation;
   private bool _ignore;
   private char _ignorechar;
   

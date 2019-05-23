@@ -7,10 +7,19 @@ using UnityEngine;
 public class TransformData : ScriptableObject
 {
     public Transform trans;
+    private Quaternion _rot;
 
     public void SetTrans(Transform newtrans)
     {
         trans = newtrans;
+    }
+
+    public void SetTransBackwards(Transform newtrans)
+    {
+        trans = newtrans;
+        _rot = newtrans.rotation;
+        _rot.y += 180;
+        newtrans.rotation = _rot;
     }
 
 }

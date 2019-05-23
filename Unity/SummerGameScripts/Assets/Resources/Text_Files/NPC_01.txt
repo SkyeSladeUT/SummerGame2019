@@ -53,4 +53,20 @@ Cafe Owner@
 ~Wha... Hey____ I thought I told you to not make a scene.*
 Ughh... Of course I have to clean up.*
 I'll be right there.>
+
+3#
+
+Cafe Owner@
+~Hey welcome back.<
+
+You@
+~Anything new?<
+
+Cafe Owner@
+~Nope.>
+
+4#
+
+Cafe Owner@
+~Sorry, I can't help you right now.>
 %

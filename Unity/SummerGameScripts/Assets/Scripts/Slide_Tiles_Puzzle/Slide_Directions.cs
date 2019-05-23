@@ -10,8 +10,7 @@ public class Slide_Directions : ScriptableObject
 {
     private List<List<bool>> _tileSlots;
     public List<Slide_Tile_Object> Tiles;
-    public UnityEvent CompletePuzzle;
-
+    public ActionObject Tile_Action;
     private List<List<bool>> SetFalse()
     {
         //initialize the list for the available directions for each slot
@@ -207,17 +206,17 @@ public class Slide_Directions : ScriptableObject
         return _tileSlots;
     }
     
-    public void CheckTiles()
+    public bool CheckTiles()
     {
         foreach (var t in Tiles)
         {
             if (!t.isTarget())
             {
-                return;
+                return false;
             }
         }
-        Debug.Log("Win Game");
-        CompletePuzzle.Invoke();
+        Tile_Action.Action.Invoke();
+        return true;
     }
 
     public List<List<bool>> GetList()

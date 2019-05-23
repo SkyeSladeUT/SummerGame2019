@@ -9,8 +9,6 @@ public class Slide_Tiles : MonoBehaviour
    private Vector3 _currentPosition, _newPosition, _difference, _MovePosition;
    public float MinDiff, MoveDist;
    private string _direction;
-   //public List<Slide_Tile_Object> Tiles;
-   public UnityEvent SlideTileEvent;
    public Slide_Tile_Object tile;
    public Slide_Directions Slide_Directions;
 
@@ -30,7 +28,25 @@ public class Slide_Tiles : MonoBehaviour
 
    private string Slide()
    {
-      if(Math.Abs(_difference.x) >= Math.Abs(_difference.y)){
+      if (tile.canMove("Right"))
+      {
+         return "Right";
+      }
+      else if (tile.canMove("Left"))
+      {
+         return "Left";
+      }
+      else if (tile.canMove("Up"))
+      {
+         return "Up";
+      }
+      else if (tile.canMove("Down"))
+      {
+         return "Down";
+      }
+
+      return "";
+      /*if(Math.Abs(_difference.x) >= Math.Abs(_difference.y)){
          if (Math.Abs(_difference.x) >= MinDiff)
          {
             if (_difference.x > 0 && tile.canMove("Right"))
@@ -59,7 +75,7 @@ public class Slide_Tiles : MonoBehaviour
          }
       }
 
-      return "";
+      return "";*/
    }
 //works
    private void Move(string direction)
@@ -89,7 +105,6 @@ public class Slide_Tiles : MonoBehaviour
       transform.localPosition = _MovePosition;
       tile.SetCurrentNum(direction, Slide_Directions.ChangeListValue(tile.GetCurrentNum(), direction));
       Slide_Directions.CheckTiles();
-      SlideTileEvent.Invoke();
    }
 
 
