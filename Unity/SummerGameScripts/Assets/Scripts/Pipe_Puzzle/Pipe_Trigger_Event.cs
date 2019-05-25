@@ -29,7 +29,6 @@ public class Pipe_Trigger_Event : MonoBehaviour
     {
         if (other.CompareTag("PipeEnd"))
         {
-            Debug.Log("ConnectEnd");
             other.GetComponent<Pipe_End_Objects>().entrance.isConnected = true;
             other.GetComponent<Pipe_End_Objects>().entrance.pipeConnectionNum = pipeNum;
             entrance.Connect(0);   
@@ -42,7 +41,11 @@ public class Pipe_Trigger_Event : MonoBehaviour
         }
 
         connected = true;
-        //Debug.Log("Connect " + pipeNum);
+
+    }
+
+    public void CheckConnection()
+    {
 
     }
 
@@ -57,6 +60,5 @@ public class Pipe_Trigger_Event : MonoBehaviour
         entrance.unConnect();
         entrance.isConnected = false;
         connected = false;
-        //Debug.Log("unconnect " + pipeNum);
     }
 }

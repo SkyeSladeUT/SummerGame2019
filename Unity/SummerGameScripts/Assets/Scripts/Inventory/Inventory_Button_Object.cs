@@ -1,24 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Inventory_Button_Object : MonoBehaviour
 {
-    public int buttonNum;
-    public string itemName = "";
-    public bool hasItem;
+    public Item item;
     private bool following;
     public GameObject TextBox;
-    public Text _text;
+    public Text _text, Description_Text;
     private Vector3 position;
 
     public void ShowDisplay()
     {
-        if (hasItem)
+        if (item!=null)
         {
             following = true;
-            _text.text = itemName;
+            _text.text = item.itemName;
             TextBox.SetActive(true);
         }
     }
@@ -28,8 +27,14 @@ public class Inventory_Button_Object : MonoBehaviour
         following = false;
         TextBox.SetActive(false);
     }
-    
-    void Update () {
+
+    public void SetDescription()
+    {
+        Description_Text.text = item.itemDescription;
+    }
+
+    private void FixedUpdate()
+    {
         Vector3 temp = Input.mousePosition;
         temp.z = 10f;
         temp.y += 50;

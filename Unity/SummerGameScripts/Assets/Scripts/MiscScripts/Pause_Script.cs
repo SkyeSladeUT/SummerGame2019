@@ -15,7 +15,7 @@ public class Pause_Script : MonoBehaviour
         inventory = false;
     }
 
-    private void Update()
+    /*private void Update()
     {
         if (Pause_Keys.KeyDown())
         {
@@ -32,7 +32,7 @@ public class Pause_Script : MonoBehaviour
                 OnUnPause.Invoke();
             }
         }
-    }
+    }*/
     
     private void FixedUpdate()
     {

@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18a9e4362b53bcc44ba18ae7dfe3a2d3, type: 3}
-  m_Name: Letter_01
+  m_Script: {fileID: 11500000, guid: e22722be57b965b498537b4f1c2fc33e, type: 3}
+  m_Name: Ingredients
   m_EditorClassIdentifier: 
-  itemName: 'Doctor''s Note #1'
-  itemDescription: note 01
-  itemType: Note
-  inventoryImage: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  objList:
+  - {fileID: 11400000, guid: dae546346e817b64396c0bf03f0bc220, type: 2}

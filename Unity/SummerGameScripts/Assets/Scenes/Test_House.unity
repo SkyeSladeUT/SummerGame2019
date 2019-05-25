@@ -5758,12 +5758,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Cinemachine.CinemachineBrain+VcamActivatedEvent, Cinemachine, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!4 &604479942 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1905507341395646968, guid: c58464478309e30409dd6115b89d85cf,
-    type: 3}
-  m_PrefabInstance: {fileID: 2083110518}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &613243974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15294,12 +15288,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1905507341805637636, guid: c58464478309e30409dd6115b89d85cf,
-        type: 3}
-      propertyPath: Load_Destination
-      value: 
-      objectReference: {fileID: 11400000, guid: 9ab1d776d3554044f81ef0054c1db073,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c58464478309e30409dd6115b89d85cf, type: 3}
 --- !u!1 &2083110519 stripped
@@ -16512,7 +16500,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 604479942}
+      objectReference: {fileID: 0}
     - target: {fileID: 7615886023411008218, guid: c86e24d15521e8d438d48ffa37866a75,
         type: 3}
       propertyPath: m_CameraDistance

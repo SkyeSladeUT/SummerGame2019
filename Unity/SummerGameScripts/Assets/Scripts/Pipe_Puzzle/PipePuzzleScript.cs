@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class PipePuzzleScript : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class PipePuzzleScript : MonoBehaviour
     private int _prevPipe, temp;
     public int NumOfPipes;
     private int Num;
+    public UnityEvent PuzzleCompleted;
 
     private void Start()
     {
@@ -62,11 +64,8 @@ public class PipePuzzleScript : MonoBehaviour
 
         if (FlowsThroughAll)
         {
-            Debug.Log("Puzzle Complete");
-        }
-        else
-        {
-            Debug.Log("Puzzle Incomplete");
+            //Debug.Log("Puzzle Complete");
+            PuzzleCompleted.Invoke();
         }
     }
     
