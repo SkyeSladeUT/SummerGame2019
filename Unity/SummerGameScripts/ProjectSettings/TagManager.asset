@@ -23,7 +23,7 @@ TagManager:
   - PostProcessing
   - PuzzleArea
   - SnapArea
-  - PipeEntrance
+  - Puzzle_Pieces
   - ParticleEffect
   - IgnoreNavMesh
   - 

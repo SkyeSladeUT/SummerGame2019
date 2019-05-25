@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Owner\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_SummerGameScripts.-1525158960.00" t="ExcludeRecursive" />
-    <e p="E:\School\Summer2019\SummerGame2019\Unity\SummerGameScripts" t="IncludeRecursive">
+    <e p="C:\Users\Owner\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_SummerGameScripts.712639932.00" t="ExcludeRecursive" />
+    <e p="E:\School\Summer2019\ProjectManagmentSummer2019\Unity Project\SummerGameScripts" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="packages" t="Include">
@@ -54,7 +54,6 @@
           </e>
           <e p="Text_Files" t="Include">
             <e p="Get_Item_01.txt" t="Include" />
-            <e p="Note_01.txt" t="Include" />
             <e p="NPC_01.txt" t="Include" />
             <e p="Test.txt" t="Include" />
           </e>
@@ -83,9 +82,8 @@
             <e p="UnityKeyCodeObject.cs" t="Include" />
             <e p="Vector3Data.cs" t="Include" />
           </e>
-          <e p="GameManagers" t="Include">
-            <e p="Game_Manager_Cafe.cs" t="Include" />
-          </e>
+          <e p="Game_Manager_Cafe.cs" t="Include" />
+          <e p="Input_Text.cs" t="Include" />
           <e p="Inventory" t="Include">
             <e p="DropDown_Script.cs" t="Include" />
             <e p="Hover_Pointer_Script.cs" t="Include" />
@@ -93,21 +91,23 @@
             <e p="Inventory_Button_Object.cs" t="Include" />
             <e p="Inventory_Display.cs" t="Include" />
             <e p="Item.cs" t="Include" />
-            <e p="Item_Pickup.cs" t="Include" />
             <e p="Note.cs" t="Include" />
           </e>
+          <e p="Item_Pickup.cs" t="Include" />
           <e p="MiscScripts" t="Include">
             <e p="ActionModifier.cs" t="Include" />
+            <e p="AutomaticSnapScript.cs" t="Include" />
             <e p="Change_Rigidbody_Script.cs" t="Include" />
             <e p="Change_Scene.cs" t="Include" />
             <e p="DeacvtivateSnapAreas.cs" t="Include" />
-            <e p="DragAndRotate.cs" t="Include" />
+            <e p="Drag_Script.cs" t="Include" />
             <e p="EventsScript.cs" t="Include" />
             <e p="Interact_with_object.cs" t="Include" />
             <e p="Move_Script.cs" t="Include" />
             <e p="OnTriggerWIthPLayerEvent.cs" t="Include" />
             <e p="Pause_Script.cs" t="Include" />
-            <e p="SnapScript.cs" t="Include" />
+            <e p="Rotate_Script.cs" t="Include" />
+            <e p="Snap_Script.cs" t="Include" />
             <e p="viewing_spot_trigger.cs" t="Include" />
           </e>
           <e p="Movement_Scripts" t="Include">
@@ -132,22 +132,32 @@
             <e p="NPC_object.cs" t="Include" />
             <e p="ReadFile.cs" t="Include" />
           </e>
-          <e p="Pipe_Puzzle" t="Include">
-            <e p="Pipe_End_Objects.cs" t="Include" />
-            <e p="Pipe_Trigger_Event.cs" t="Include" />
-            <e p="PipeEntrance.cs" t="Include" />
-            <e p="PipeListData.cs" t="Include" />
-            <e p="PipeObject.cs" t="Include" />
-            <e p="PipePuzzleScript.cs" t="Include" />
-            <e p="Single_Pipe_Object.cs" t="Include" />
-          </e>
-          <e p="Slide_Tiles_Puzzle" t="Include">
-            <e p="Set_Tile_Text.cs" t="Include" />
-            <e p="Slide_Directions.cs" t="Include" />
-            <e p="Slide_Tile_Object.cs" t="Include" />
-            <e p="Slide_Tiles.cs" t="Include" />
+          <e p="Puzzles" t="Include">
+            <e p="Geometry_Puzzle" t="Include">
+              <e p="Match_Script.cs" t="Include" />
+              <e p="Name_ID.cs" t="Include" />
+              <e p="Object_ID.cs" t="Include" />
+              <e p="Piece_Check.cs" t="Include" />
+              <e p="Piece_Object.cs" t="Include" />
+            </e>
+            <e p="Pipe_Puzzle" t="Include">
+              <e p="Pipe_End_Objects.cs" t="Include" />
+              <e p="Pipe_Trigger_Event.cs" t="Include" />
+              <e p="PipeEntrance.cs" t="Include" />
+              <e p="PipeListData.cs" t="Include" />
+              <e p="PipeObject.cs" t="Include" />
+              <e p="PipePuzzleScript.cs" t="Include" />
+              <e p="Single_Pipe_Object.cs" t="Include" />
+            </e>
+            <e p="Slide_Tiles_Puzzle" t="Include">
+              <e p="Set_Tile_Text.cs" t="Include" />
+              <e p="Slide_Directions.cs" t="Include" />
+              <e p="Slide_Tile_Object.cs" t="Include" />
+              <e p="Slide_Tiles.cs" t="Include" />
+            </e>
           </e>
         </e>
+        <e p="Test.cs" t="Include" />
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="NavMeshComponents.csproj" t="IncludeRecursive" />

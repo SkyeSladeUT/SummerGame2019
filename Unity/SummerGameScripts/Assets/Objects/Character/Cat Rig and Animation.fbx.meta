@@ -141,6 +141,7 @@ ModelImporter:
     7400004: WalkToRun_Cat
     7400006: RunToWalk_Cat
     7400008: Idle_Cat
+    7400010: Take 001
     9500000: //RootNode
     13700000: Cat_GEO
   externalObjects: {}
