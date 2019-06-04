@@ -16,4 +16,19 @@ public class IntData : ScriptableObject
     {
         value++;
     }
+
+    public void SetVal(IntData val)
+    {
+        value = val.value;
+    }
+
+    public void AddVal(int val)
+    {
+        value += val;
+    }
+
+    public void AddVal(IntData val)
+    {
+        value += val.value;
+    }
 }

@@ -15,7 +15,7 @@ public class ReadFile : ScriptableObject
   private List<List<string>> _dialouge;
   public List<List<string>> _charaConversation;
   private bool _ignore;
-  private char _ignorechar;
+  private char _ignorechar, choiceChar;
   
   public void Read()
   {

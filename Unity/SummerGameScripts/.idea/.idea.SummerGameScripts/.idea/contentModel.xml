@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Owner\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_SummerGameScripts.712639932.00" t="ExcludeRecursive" />
-    <e p="E:\School\Summer2019\ProjectManagmentSummer2019\Unity Project\SummerGameScripts" t="IncludeRecursive">
+    <e p="C:\Users\Owner\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_SummerGameScripts.-1525158960.00" t="ExcludeRecursive" />
+    <e p="E:\School\Summer2019\SummerGame2019\Unity\SummerGameScripts" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="packages" t="Include">
@@ -82,6 +82,10 @@
             <e p="UnityKeyCodeObject.cs" t="Include" />
             <e p="Vector3Data.cs" t="Include" />
           </e>
+          <e p="Dialouge_Scripts" t="Include">
+            <e p="Choice_Selection.cs" t="Include" />
+            <e p="dialouge_script.cs" t="Include" />
+          </e>
           <e p="Game_Manager_Cafe.cs" t="Include" />
           <e p="Input_Text.cs" t="Include" />
           <e p="Inventory" t="Include">
@@ -127,7 +131,6 @@
           </e>
           <e p="NPC_Scripts" t="Include">
             <e p="dialouge_objects.cs" t="Include" />
-            <e p="dialouge_script.cs" t="Include" />
             <e p="NPC_Controller.cs" t="Include" />
             <e p="NPC_object.cs" t="Include" />
             <e p="ReadFile.cs" t="Include" />
