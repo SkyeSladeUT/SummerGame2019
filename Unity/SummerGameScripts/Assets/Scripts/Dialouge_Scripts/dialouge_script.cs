@@ -131,6 +131,7 @@ public class dialouge_script : MonoBehaviour
                         {
                             if (character.Script.Dialouge[_conNum][paragraph][line][_char] == _choice_char)
                             {
+                                paragraph++;
                                 choiceselection.value = true;
                                 CallChoice();
                                 StopCoroutine(ScrollText());
@@ -187,6 +188,7 @@ public class dialouge_script : MonoBehaviour
         for (int i = 0; i < 4; i++)
         {
             Debug.Log(i);
+            Debug.Log(line);
             if(line > character.Script.Dialouge[_conNum][paragraph].Count)
             {
                 Debug.Log("choice " + i + "is empty");

@@ -84,7 +84,7 @@ public class Choice_Selection : MonoBehaviour
                 ChoiceNum.value = 4;
                 ChoiceTexts[3].color = Color.yellow;
             }
-            else if (interact.KeyDown())
+            else if (interact.KeyDown() && ChoiceNum.value != 0)
             {
                 InChoiceSelection.value = false;
                 OnChoiceSelection.Invoke();
