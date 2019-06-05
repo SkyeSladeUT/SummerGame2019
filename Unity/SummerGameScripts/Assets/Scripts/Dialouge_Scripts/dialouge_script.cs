@@ -187,15 +187,17 @@ public class dialouge_script : MonoBehaviour
         line = 0;
         for (int i = 0; i < 4; i++)
         {
-            Debug.Log(i);
-            Debug.Log(line);
-            if(line > character.Script.Dialouge[_conNum][paragraph].Count)
+            Debug.Log(character.Script.Dialouge[_conNum][paragraph].Count);
+            if(i > character.Script.Dialouge[_conNum][paragraph].Count-1)
             {
+                ChoiceOptions[i].value = "";
                 Debug.Log("choice " + i + "is empty");
-                break;
             }
-            ChoiceOptions[i].value = character.Script.Dialouge[_conNum][paragraph][line];
-            line++;
+            else
+            {
+                ChoiceOptions[i].value = character.Script.Dialouge[_conNum][paragraph][line];
+                line++;
+            }
         }
         Dialouge_Text.text = "";
         Character_Text.text = "";
