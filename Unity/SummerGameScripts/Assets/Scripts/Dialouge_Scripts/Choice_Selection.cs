@@ -7,12 +7,12 @@ using UnityEngine.UI;
 public class Choice_Selection : MonoBehaviour
 {
     public GameObject ChoiceSelectionBox;
-    public IntData ChoiceNum;
+    public IntData ChoiceNum, NumChoices;
     public List<Text> ChoiceTexts;
     public List<StringData> Choices;
     public BoolData InChoiceSelection;
     public KeyCodeData interact;
-    public UnityEvent OnChoiceSelection;
+    public UnityEvent OnChoiceSelection, LeaveChoiceSelection;
 
     public void Call()
     {
@@ -44,7 +44,7 @@ public class Choice_Selection : MonoBehaviour
         //Debug.Log("StartChoices");
         while (InChoiceSelection.value)
         {
-            if (Input.GetAxisRaw("Horizontal") < 0)
+            if (Input.GetAxisRaw("Horizontal") < 0 && NumChoices.value > 0)
             {
                 //choice 1
                 if (ChoiceNum.value != 0)
@@ -54,7 +54,7 @@ public class Choice_Selection : MonoBehaviour
                 ChoiceNum.value = 1;
                 ChoiceTexts[0].color = Color.yellow;
             }
-            else if (Input.GetAxisRaw("Horizontal") > 0)
+            else if (Input.GetAxisRaw("Horizontal") > 0 && NumChoices.value > 2)
             {
                 //choice 3
                 if (ChoiceNum.value != 0)
@@ -64,7 +64,7 @@ public class Choice_Selection : MonoBehaviour
                 ChoiceNum.value = 3;
                 ChoiceTexts[2].color = Color.yellow;
             }
-            else if (Input.GetAxisRaw("Vertical") > 0)
+            else if (Input.GetAxisRaw("Vertical") > 0  && NumChoices.value > 1)
             {
                 //choice 2
                 if (ChoiceNum.value != 0)
@@ -74,7 +74,7 @@ public class Choice_Selection : MonoBehaviour
                 ChoiceNum.value = 2;
                 ChoiceTexts[1].color = Color.yellow;
             }
-            else if (Input.GetAxisRaw("Vertical") < 0)
+            else if (Input.GetAxisRaw("Vertical") < 0 && NumChoices.value > 3)
             {
                 //choice 4
                 if (ChoiceNum.value != 0)
@@ -87,7 +87,10 @@ public class Choice_Selection : MonoBehaviour
             else if (interact.KeyDown() && ChoiceNum.value != 0)
             {
                 InChoiceSelection.value = false;
-                OnChoiceSelection.Invoke();
+                if(ChoiceNum.value < NumChoices.value)
+                    OnChoiceSelection.Invoke();
+                else
+                    LeaveChoiceSelection.Invoke();
                 Close();
             }
             yield return new WaitForFixedUpdate();

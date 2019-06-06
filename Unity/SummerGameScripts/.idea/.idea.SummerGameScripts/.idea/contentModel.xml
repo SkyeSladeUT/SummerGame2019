@@ -85,6 +85,7 @@
           <e p="Dialouge_Scripts" t="Include">
             <e p="Choice_Selection.cs" t="Include" />
             <e p="dialouge_script.cs" t="Include" />
+            <e p="ReadFile.cs" t="Include" />
           </e>
           <e p="Game_Manager_Cafe.cs" t="Include" />
           <e p="Input_Text.cs" t="Include" />
@@ -133,7 +134,6 @@
             <e p="dialouge_objects.cs" t="Include" />
             <e p="NPC_Controller.cs" t="Include" />
             <e p="NPC_object.cs" t="Include" />
-            <e p="ReadFile.cs" t="Include" />
           </e>
           <e p="Puzzles" t="Include">
             <e p="Geometry_Puzzle" t="Include">

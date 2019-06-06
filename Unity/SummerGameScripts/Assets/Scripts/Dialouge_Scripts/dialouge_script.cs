@@ -11,7 +11,7 @@ public class dialouge_script : MonoBehaviour
     public Text Dialouge_Text, Character_Text;
     public GameObject Dialouge_Object;
     public KeyCodeData Interact;
-    public IntData ConvNum, BasicConNum;
+    public IntData ConvNum, BasicConNum, NumConv;
     private bool ConvStart, SpeedUp, inRange;
     private int _char, line, paragraph, _conNum;
     private string _text_to_display;
@@ -185,6 +185,7 @@ public class dialouge_script : MonoBehaviour
         Dialouge_Object.SetActive(false);
         choiceselection.value = true;
         line = 0;
+        NumConv.value = 0;
         for (int i = 0; i < 4; i++)
         {
             Debug.Log(character.Script.Dialouge[_conNum][paragraph].Count);
@@ -197,6 +198,7 @@ public class dialouge_script : MonoBehaviour
             {
                 ChoiceOptions[i].value = character.Script.Dialouge[_conNum][paragraph][line];
                 line++;
+                NumConv.value++;
             }
         }
         Dialouge_Text.text = "";
