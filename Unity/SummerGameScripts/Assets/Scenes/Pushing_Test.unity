@@ -1816,8 +1816,74 @@ PrefabInstance:
       propertyPath: ChoiceTexts.Array.data[3]
       value: 
       objectReference: {fileID: 796316660}
+    - target: {fileID: 1962380583, guid: 481d18ae3c38d9643b94a7aa3102147f, type: 3}
+      propertyPath: OnChoiceSelection.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddVal
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145634733, guid: 481d18ae3c38d9643b94a7aa3102147f, type: 3}
+      propertyPath: m_Name
+      value: EndConversation
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781714839, guid: 481d18ae3c38d9643b94a7aa3102147f, type: 3}
+      propertyPath: Event.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781714839, guid: 481d18ae3c38d9643b94a7aa3102147f, type: 3}
+      propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 0f865cfbee5cd4140b95d38f3bbd77f2,
+        type: 2}
+    - target: {fileID: 1781714839, guid: 481d18ae3c38d9643b94a7aa3102147f, type: 3}
+      propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetVal
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781714839, guid: 481d18ae3c38d9643b94a7aa3102147f, type: 3}
+      propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: IntData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781714839, guid: 481d18ae3c38d9643b94a7aa3102147f, type: 3}
+      propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781714839, guid: 481d18ae3c38d9643b94a7aa3102147f, type: 3}
+      propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: fc6956ae089a2d848bbac0df17af8c77,
+        type: 2}
+    - target: {fileID: 1781714839, guid: 481d18ae3c38d9643b94a7aa3102147f, type: 3}
+      propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781714839, guid: 481d18ae3c38d9643b94a7aa3102147f, type: 3}
+      propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781714839, guid: 481d18ae3c38d9643b94a7aa3102147f, type: 3}
+      propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1339916746}
+    - target: {fileID: 1781714839, guid: 481d18ae3c38d9643b94a7aa3102147f, type: 3}
+      propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Sub
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781714839, guid: 481d18ae3c38d9643b94a7aa3102147f, type: 3}
+      propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 481d18ae3c38d9643b94a7aa3102147f, type: 3}
+--- !u!114 &1339916746 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1781714839, guid: 481d18ae3c38d9643b94a7aa3102147f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1339916745}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d11c72db627f28442a763e924b3348eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1409190530
 PrefabInstance:
   m_ObjectHideFlags: 0

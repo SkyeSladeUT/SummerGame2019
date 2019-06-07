@@ -28,7 +28,6 @@ public class dialouge_script : MonoBehaviour
         inRange = false;
         SpeedUp = false;
         ConvStart = false;
-        //ConvNum.value = 0;
         line = 0;
         paragraph = 0;
         character.Initialize();
