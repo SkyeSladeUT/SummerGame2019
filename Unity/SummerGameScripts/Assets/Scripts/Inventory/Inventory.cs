@@ -11,22 +11,38 @@ public class Inventory : ScriptableObject
     public void AddObj(GameObject obj)
     {
         item = obj.GetComponent<Item_Pickup>().item;
-        if (item.itemType == "Object")
-            Objects.objList.Add(item);
-        else if (item.itemType == "Note")
-            Notes.objList.Add(item);
-        else if(item.itemType == "Key")
-            Keys.objList.Add(item);
+        AddItem(item);
     }
     
     public void AddItem(Item item)
     {
         if (item.itemType == "Object")
+        {
+            foreach (var OBJ in Objects.objList)
+            {
+                if (OBJ == item)
+                    return;
+            }
             Objects.objList.Add(item);
+        }
         else if (item.itemType == "Note")
+        {
+            foreach (var note in Notes.objList)
+            {
+                if (note == item)
+                    return;
+            }
             Notes.objList.Add(item);
-        else if(item.itemType == "Key")
+        }
+        else if (item.itemType == "Key")
+        {
+            foreach (var key in Keys.objList)
+            {
+                if (key == item)
+                    return;
+            }
             Keys.objList.Add(item);
+        }
     }
     
     

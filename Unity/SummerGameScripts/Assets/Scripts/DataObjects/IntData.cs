@@ -12,11 +12,6 @@ public class IntData : ScriptableObject
         value = val;
     }
 
-    public void IncrementVal()
-    {
-        value++;
-    }
-
     public void SetVal(IntData val)
     {
         value = val.value;
@@ -30,5 +25,10 @@ public class IntData : ScriptableObject
     public void AddVal(IntData val)
     {
         value += val.value;
+    }
+
+    public void IncrementVal()
+    {
+        value++;
     }
 }

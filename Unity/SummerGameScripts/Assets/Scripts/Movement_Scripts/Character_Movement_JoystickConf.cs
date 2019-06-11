@@ -114,7 +114,6 @@ public class Character_Movement_JoystickConf : MonoBehaviour
 
     public IEnumerator Rotate()
     {
-        Debug.Log("Rotate");
         CRRunning = true;
         _rotation = target.trans.rotation;
         while (!CheckRot(.5f))
@@ -122,14 +121,12 @@ public class Character_Movement_JoystickConf : MonoBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, _rotation, rotatespeed * Time.deltaTime);
             yield return new WaitForFixedUpdate();
         }
-        Debug.Log("Rotate Done");
         CRRunning = false;
     }
     
 
     public IEnumerator Walk()
     {
-        Debug.Log("Walk");
         CRRunning = true;
         _destination = target.trans.position;
         _destination.y = transform.position.y;
@@ -137,11 +134,9 @@ public class Character_Movement_JoystickConf : MonoBehaviour
                (((transform.position.x > _destination.x + .1f) || (transform.position.x < _destination.x - .1f)) 
                 || ((transform.position.z > _destination.z + .1f) || (transform.position.z < _destination.z - .1f))))
         {
-            Debug.Log("Walking");
             transform.position = Vector3.Lerp(transform.position, _destination, walkspeed * Time.deltaTime);
             yield return new WaitForFixedUpdate();
         }
-        Debug.Log("Walk Done");
         SetPosition();
         CRRunning = false;
     }

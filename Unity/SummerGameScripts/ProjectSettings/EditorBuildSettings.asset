@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/TestScripts.unity
     guid: 5acc0945c8cf3ad49afb94c61c8c4415
   - enabled: 1
-    path: Assets/Scenes/Test_House.unity
+    path: Assets/Scenes/Cafe_Scene.unity
     guid: ab62409ff93fde04998ebe1c1d1481b4
   m_configObjects: {}

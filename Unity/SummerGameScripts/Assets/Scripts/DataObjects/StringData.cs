@@ -13,4 +13,14 @@ public class StringData : ScriptableObject
         value = name;
     }
 
+    public void AddTo(string addstring)
+    {
+        value += addstring;
+    }
+
+    public void ResetString()
+    {
+        value = "";
+    }
+
 }

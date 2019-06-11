@@ -5,26 +5,5 @@ Would you like to be my friend?<
 
 George@
 ~Hi Carl*
-No I would not.{<
-
-~Option 1*
-Option 2*
-Option 3*
-Option 4>
-
-1#
-You@
-~Option 1 Dialogue>
-
-2#
-You@
-~Option 2 Dialogue>
-
-3#
-You@
-~Option 3 Dialogue>
-
-4#
-You@
-~Option 4 Dialogue>
+No I would not.>
 %

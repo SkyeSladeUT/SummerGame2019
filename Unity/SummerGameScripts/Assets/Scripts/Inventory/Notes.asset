@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e22722be57b965b498537b4f1c2fc33e, type: 3}
   m_Name: Notes
   m_EditorClassIdentifier: 
-  objList:
-  - {fileID: 11400000, guid: 026c05181395aed4e894d39779a2b069, type: 2}
+  objList: []

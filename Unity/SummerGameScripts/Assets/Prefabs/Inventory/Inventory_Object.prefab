@@ -13416,7 +13416,7 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Notes
       m_Image: {fileID: 0}
-    - m_Text: Ingredients
+    - m_Text: Objects
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
