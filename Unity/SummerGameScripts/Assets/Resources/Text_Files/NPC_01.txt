@@ -1,71 +1,71 @@
-0#
+0 - First entrance#
 Cafe Owner@
 ~Hey bud, what can I get for you today?<
 
-You@
+Me@
 ~Oh, I'm not here for a drink, I need answers.<
 
 Cafe Owner@
 ~I'll give you what I can.<
 
-You@
+Me@
 ~Have you noticed anything or anyone suspicious?<
 
 Cafe Owner@
-~I don't know... I mean food keeps disappearing from the storage room. Now we always have to keep the back room locked.*
+~I don't know... I mean food keeps disappearing from the storage room. Now we always have to keep the back room locked.+
 I think its that sneaky _____. She\He is always getting into others stuff and we can't seem to stop him\her.<
 
-You@
+Me@
 ~I know what you mean. No matter what I do ___ always finds a way to get into new trouble. Anything else?<
 
 Cafe Owner@
-~I think I heard that Mayor Merrtabb was having some "paranormal" activity going on at her place.*
-Of course, this isn't anything new... she always has something new and strange happening in her life.*
+~I think I heard that Mayor Merrtabb was having some "paranormal" activity going on at her place.+
+Of course, this isn't anything new... she always has something new and strange happening in her life.+
 But what can I say, strange people attract strange things.<
 
-You@
+Me@
 ~Well, thanks for your help. I'll look into it.>
 
-1#
+1 - trying to get behind the bar#
 
-You@
+Me@
 ~Excuse me, I need to check something behind the bar.<
 
 Cafe Owner@
 ~I'm sorry but I can't let you back here. Employees Only.<
 
-You@
+Me@
 ~But I'm the police.<
 
 Cafe Owner@
-~I'm sorry, but ______ said that under no circumstance should I let anyone behind here.*
+~I'm sorry, but ______ said that under no circumstance should I let anyone behind here.+
 I think She\He's worried that someone will break into our cashiers or something.<
 
-You@
+Me@
 ~But...<
 
 Cafe Owner@
 ~I can't.>
 
-2#
+2 - knocking over the bus boy#
 
 Cafe Owner@
-~Wha... Hey____ I thought I told you to not make a scene.*
-Ughh... Of course I have to clean up.*
+~Wha... Hey____ I thought I told you to not make a scene.+
+Ughh... Of course I have to clean up.+
 I'll be right there.>
 
-3#
+3 - second time in the cafe#
 
 Cafe Owner@
 ~Hey welcome back.<
 
-You@
+Me@
 ~Anything new?<
 
 Cafe Owner@
 ~Nope.>
 
-4#
+4 - cleaning up the mess#
 
 Cafe Owner@
 ~Sorry, I can't help you right now.>

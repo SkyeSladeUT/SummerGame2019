@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd1f3286ef9bc7840b5b02dadb925f6b, type: 3}
-  m_Name: Player_Key_Code
+  m_Script: {fileID: 11500000, guid: 41151c1ae3c39a3488f11a8d99b55a8f, type: 3}
+  m_Name: Picked_Up_Kims_Book
   m_EditorClassIdentifier: 
-  value: 
-  prevvalue: 
-  LengthMax: 4
+  value: 1

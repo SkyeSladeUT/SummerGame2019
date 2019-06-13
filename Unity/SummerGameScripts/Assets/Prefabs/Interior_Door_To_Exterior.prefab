@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 293126995449467859}
   m_Layer: 0
-  m_Name: Interior_Door
+  m_Name: Interior_Door_To_Exterior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -136,7 +136,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 293126996151244405}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.07172012, y: -0.24130678, z: -8.078157}
+  m_LocalPosition: {x: 0.07172012, y: -0.24130678, z: -8.9}
   m_LocalScale: {x: 1.1425, y: 1.8782015, z: -0.059145827}
   m_Children: []
   m_Father: {fileID: 293126995449467859}
@@ -393,14 +393,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.30641174
       objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: 4876cb8475a18e44b9ac2ec25c7cf754, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e23ccdfd1517ff649ac3b1afffdd35b1, type: 2}
     - target: {fileID: 9500000, guid: 4876cb8475a18e44b9ac2ec25c7cf754, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: d63326c8d876d0849a7bedd6a488b48c, type: 2}
+    - target: {fileID: 2300000, guid: 4876cb8475a18e44b9ac2ec25c7cf754, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e23ccdfd1517ff649ac3b1afffdd35b1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4876cb8475a18e44b9ac2ec25c7cf754, type: 3}
 --- !u!1 &293126996025353018 stripped

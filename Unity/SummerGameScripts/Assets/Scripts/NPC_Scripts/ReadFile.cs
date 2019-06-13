@@ -51,7 +51,7 @@ public class ReadFile : ScriptableObject
             _line = "";
             _paragraph = new List<string>();
             break;
-          case '*':
+          case '+':
             //end line
             //Debug.Log(_line);
             _paragraph.Add(_line);

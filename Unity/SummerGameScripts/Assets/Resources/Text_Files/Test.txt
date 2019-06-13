@@ -1,9 +1,9 @@
 0#
 Carl@
-~Hi I'm Carl!*
+~Hi I'm Carl!+
 Would you like to be my friend?<
 
 George@
-~Hi Carl*
+~Hi Carl+
 No I would not.>
 %

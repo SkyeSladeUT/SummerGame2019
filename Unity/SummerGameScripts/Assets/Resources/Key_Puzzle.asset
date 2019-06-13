@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd1f3286ef9bc7840b5b02dadb925f6b, type: 3}
-  m_Name: Player_Key_Code
+  m_Script: {fileID: 11500000, guid: 9618082cf15307e488299cd3d9c22e4d, type: 3}
+  m_Name: Key_Puzzle
   m_EditorClassIdentifier: 
-  value: 
+  value: 123456
   prevvalue: 
-  LengthMax: 4
+  LengthMax: 6
+  CorrectString: 123456
