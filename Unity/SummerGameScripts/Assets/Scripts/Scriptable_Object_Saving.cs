@@ -25,5 +25,4 @@ public class Scriptable_Object_Saving : ScriptableObject
                 JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString(data.name), data);
         }
     }
-
 }

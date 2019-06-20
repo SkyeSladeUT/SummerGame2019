@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -17,6 +16,7 @@ public class dialouge_script : MonoBehaviour
     private string _text_to_display;
     public ActionObject EndDialouge;
     public UnityEvent OnInteract, OnChoiceSelectStart;
+    public UnityEvent Mad, Happy, Surprised, Sad, Normal;
     private char _choice_char;
     public BoolData choiceselection;
     public List<StringData> ChoiceOptions;
@@ -105,9 +105,11 @@ public class dialouge_script : MonoBehaviour
                 Character_Text.text = character.Script.Characters[_conNum][paragraph];
             while (line < character.Script.Dialouge[_conNum][paragraph].Count)
             {
+                RunReaction();
                 _text_to_display = "";
                 while (_char < character.Script.Dialouge[_conNum][paragraph][line].Length)
                 {
+                    
                     if (character.Script.Dialouge[_conNum][paragraph][line][_char] == _choice_char)
                     {
                         choiceselection.value = true;
@@ -200,5 +202,32 @@ public class dialouge_script : MonoBehaviour
         Dialouge_Object.SetActive(false);
         OnChoiceSelectStart.Invoke(); 
         ConvStart = false;
+    }
+
+    private void RunReaction()
+    {
+        Debug.Log("Reaction");
+        Debug.Log(character.Script.Reactions[_conNum][paragraph][line][1]);
+        if (line >= character.Script.Reactions[_conNum][paragraph].Count)
+            return;
+        switch (character.Script.Reactions[_conNum][paragraph][line][1])
+        {
+            case 'N':
+                Normal.Invoke();
+                break;
+            case 'M':
+                Mad.Invoke();
+                break;
+            case 'S':
+                Surprised.Invoke();
+                break;
+            case 'H':
+                Happy.Invoke();
+                break;
+            default:
+                Debug.Log("None");
+                break;
+            
+        }
     }
 }

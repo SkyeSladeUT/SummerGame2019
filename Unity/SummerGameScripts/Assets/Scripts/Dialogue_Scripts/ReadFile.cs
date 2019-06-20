@@ -1,8 +1,6 @@
-﻿using System.Collections;
+﻿
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.Windows;
 [CreateAssetMenu(menuName = "Character/Files")]
 public class ReadFile : ScriptableObject
 {
@@ -10,10 +8,11 @@ public class ReadFile : ScriptableObject
   public List<List<List<string>>> _conversation;
   private string _script, _line;
   private int  _convNum;
-  private List<string> _characterNames;
+  private List<string> _characterNames, reactionsline;
   private List<string> _characterspara, _paragraph;
-  private List<List<string>> _dialouge;
-  public List<List<string>> _charaConversation;
+  private List<List<string>> _dialouge, reactionspara;
+  public List<List<string>> _charaConversation; 
+  public List<List<List<string>>> reactionConversation;
   private bool _ignore;
   private char _ignorechar;
   
@@ -24,6 +23,9 @@ public class ReadFile : ScriptableObject
     _dialouge = new List<List<string>>();
     _charaConversation = new List<List<string>>();
     _conversation = new List<List<List<string>>>();
+    reactionsline = new List<string>();
+    reactionspara = new List<List<string>>();
+    reactionConversation = new List<List<List<string>>>();
     _convNum = 0;
     _line = "";
     _ignore = false;
@@ -60,6 +62,8 @@ public class ReadFile : ScriptableObject
           case '<':
             //end paragraph
             //Debug.Log(_line);
+            reactionspara.Add(reactionsline);
+            reactionsline = new List<string>();
             _paragraph.Add(_line);
             _line = "";
             _dialouge.Add(_paragraph);
@@ -70,6 +74,10 @@ public class ReadFile : ScriptableObject
             //Debug.Log("EndConv");
             _charaConversation.Add(_characterspara);
             _characterspara = new List<string>();
+            reactionspara.Add(reactionsline);
+            reactionsline = new List<string>();
+            reactionConversation.Add(reactionspara);
+            reactionspara = new List<List<string>>();
             //Debug.Log(_line);
             _paragraph.Add(_line);
             _line = "";
@@ -88,6 +96,11 @@ public class ReadFile : ScriptableObject
             _characterspara.Add(_line);
             _line = "";
             break;
+          case '^':
+            reactionsline.Add(_line);
+            _line = "";
+            break;
+            //character reaction
           default:
             _line = _line + c;
             break;
@@ -129,6 +142,16 @@ public class ReadFile : ScriptableObject
     }
 
     return _charaConversation;
+  }
+
+  public List<List<List<string>>> GetReactionsList()
+  {
+    if (reactionConversation == null)
+    {
+      Read();
+    }
+
+    return reactionConversation;
   }
   
   
