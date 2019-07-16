@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: Dragon_Body.ma
-//Last modified: Tue, Jul 16, 2019 11:27:05 AM
+//Last modified: Tue, Jul 16, 2019 11:27:55 AM
 //Codeset: 1252
 requires maya "2018";
 currentUnit -l centimeter -a degree -t film;
@@ -13,13 +13,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "45CDD3C4-49BD-F9E6-C8FC-4584FEB66E6E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.6212679648427915 4.5554762911847453 7.1622262711604625 ;
-	setAttr ".r" -type "double3" -42.338352730184383 -332.19999999993576 -1.7977747490511269e-15 ;
+	setAttr ".t" -type "double3" 10.585113674009227 1.6962162771658698 4.4943230636555356 ;
+	setAttr ".r" -type "double3" -7.5383527301849815 -276.59999999993346 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "C79B32A1-49D2-A106-3605-C8B082D1DC99";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 5.8176172734620533;
+	setAttr ".coi" 11.070926192559165;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -1685,11 +1685,7 @@ createNode mesh -n "pCylinderShape1" -p "pCylinder1";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Front_Leg";
-	rename -uid "8E719051-43C8-73C2-ACD0-9B95F9F8D0FF";
-	setAttr ".rp" -type "double3" 0.75608015687060992 -1.5222407693644509 1.2835139322050235 ;
-	setAttr ".sp" -type "double3" 0.75608015687060992 -1.5222407693644509 1.2835139322050235 ;
-createNode transform -n "pCube1" -p "Front_Leg";
+createNode transform -n "pCube1";
 	rename -uid "27F9031A-4990-724B-1B88-C08E1230C4D9";
 	setAttr ".t" -type "double3" 0.53595457695887649 -1.1392050671359601 -0.20268065611621411 ;
 	setAttr ".r" -type "double3" -15.871938995221813 0 0 ;
