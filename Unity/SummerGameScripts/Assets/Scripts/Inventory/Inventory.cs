@@ -5,8 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Inventory/Inventory")]
 public class Inventory : ScriptableObject
 {
-    public ListData Objects, Notes, Keys;
+    public ListData Objects, Notes, Keys, DetectiveNotes;
     private Item item;
+    public BoolData hasItem;
 
     public void AddObj(GameObject obj)
     {
@@ -43,6 +44,98 @@ public class Inventory : ScriptableObject
             }
             Keys.objList.Add(item);
         }
+        else if (item.itemType == "Hint")
+        {
+            foreach (var hint in DetectiveNotes.objList)
+            {
+                if (hint == item)
+                    return;
+            }
+            DetectiveNotes.objList.Add(item);
+        }
+    }
+
+    public void RemoveItem(Item item)
+    {
+        if(item.itemType== "Object")
+            Objects.objList.Remove(item);
+        if (item.itemType == "Note")
+            Notes.objList.Remove(item);
+        if (item.itemType == "Key")
+            Keys.objList.Remove(item);
+        if (item.itemType == "Hint")
+            DetectiveNotes.objList.Remove(item);
+    }
+
+    public void HasItem(Item item)
+    {
+        
+        if (item.itemType == "Object")
+        {
+            Debug.Log("Check Object");
+            foreach (var OBJ in Objects.objList)
+            {
+                if (OBJ == item)
+                {
+                    Debug.Log("HasItem");
+                    hasItem.value = true;
+                    return;
+                }
+                
+            }
+            hasItem.value = false;
+            return;
+        }
+        else if (item.itemType == "Note")
+        {
+            Debug.Log("Check Note");
+            foreach (var note in Notes.objList)
+            {
+                if (note == item)
+                {
+                    Debug.Log("HasItem");
+                    hasItem.value = true;
+                    return;
+                }
+                
+            }
+            hasItem.value = false;
+            return;
+        }
+        else if (item.itemType == "Key")
+        {
+            foreach (var key in Keys.objList)
+            {
+                if (key == item)
+                {
+                    Debug.Log("HasItem");
+                    hasItem.value = true;
+                    return;
+                }
+            }
+            hasItem.value = false;
+            return;
+        }
+        else if (item.itemType == "Hint")
+        {
+            Debug.Log("Check Hint");
+            foreach (var hint in DetectiveNotes.objList)
+            {
+                if (hint == item)
+                {
+                    hasItem.value = true;
+                    return;
+                }
+                
+            }
+            hasItem.value = false;
+            return;
+        }
+        else
+        {
+            hasItem.value = false;
+        }
+       
     }
     
     

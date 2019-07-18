@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a9e4362b53bcc44ba18ae7dfe3a2d3, type: 3}
   m_Name: Back_Room_Key
   m_EditorClassIdentifier: 
-  itemName: Cafe Key
-  itemDescription: key to the back room of the cafe
+  itemName: Ice Cream Shop Key
+  itemDescription: key to the back room of the Ice Cream Shop
   itemType: Key
   inventoryImage: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}

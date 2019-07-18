@@ -7,16 +7,17 @@ public class Camera_Switch : MonoBehaviour
 {
     private CinemachineMixingCamera MixCam;
     private int CamActive;
+    public int startcam;
     public float CamSpeed;
     private void Start()
     {
-        CamActive = 0;
         MixCam = GetComponent<CinemachineMixingCamera>();
-        MixCam.SetWeight(0,1);
-        for (int i = 1; i < MixCam.ChildCameras.Length; i++)
+        CamActive = startcam;
+        for (int i = 0; i < MixCam.ChildCameras.Length; i++)
         {
             MixCam.SetWeight(i, 0);
         }
+        MixCam.SetWeight(startcam,1);
     }
 
     public void ToCam1()

@@ -12,10 +12,10 @@ public class Character_Movement_JoystickConf : MonoBehaviour
     public Player_Object player;
     private CharacterController _controller;
     private Quaternion _rotation;
-    private float angle, offsetAngle, walkspeed, rotatespeed;
+    private float angle, offsetAngle, walkspeed, rotatespeed, scale;
     public float RotationFloat, SpeedFloat;
     //private bool enabled;
-    private bool CRRunning;
+    private bool CRRunning = false;
     public TransformData target;
     public BoolData ReachedDestination;
     public Vector3Data Load_Destination;
@@ -24,7 +24,7 @@ public class Character_Movement_JoystickConf : MonoBehaviour
  
     void Start()
     {
-        CRRunning = false;
+        scale = 1;
         _controller = GetComponent<CharacterController> ();
         MainCamera = Camera.main.transform;
         EnableCC();
@@ -33,17 +33,24 @@ public class Character_Movement_JoystickConf : MonoBehaviour
     private void FixedUpdate()
     {
             _current = player.Current;
+            if(!_controller.isGrounded)
+                _current.Movement.y -= _current.Gravity.Value * Time.deltaTime;
             _current.Move(transform, _controller, MainCamera);
     }
 
+
     public void DisableCC()
     {
+        if(_controller == null)
+            _controller = GetComponent<CharacterController> ();
         _controller.enabled = false;
         enabled = false;
     }
 
     public void EnableCC()
     {
+        if(_controller == null)
+            _controller = GetComponent<CharacterController> ();
         _controller.enabled = true;
         enabled = true;
     }
@@ -79,9 +86,10 @@ public class Character_Movement_JoystickConf : MonoBehaviour
         ReachedDestination.value = false;
         CRRunning = true;
         StartCoroutine(Rotate());
-        yield return new WaitUntil( () => CRRunning == false);
+        yield return new WaitWhile(() => CRRunning);
+        CRRunning = true;
         StartCoroutine(Walk());
-        yield return new WaitUntil( () => CRRunning == false);
+        yield return new WaitWhile(() => CRRunning);
         ReachDestAct.Action.Invoke();
         
     }
@@ -102,23 +110,25 @@ public class Character_Movement_JoystickConf : MonoBehaviour
         rotatespeed = RotationFloat;
         ReachedDestination.value = false;
         _rotation = target.trans.rotation;
-        CRRunning = true;
+        CRRunning = true; 
         StartCoroutine(Rotate());
-        yield return new WaitUntil( () => CRRunning == false);
+        yield return new WaitUntil( () => !CRRunning);     
+        CRRunning = true;
         StartCoroutine(Walk());
-        yield return new WaitUntil( () => CRRunning == false);
-        //Reach_Destination.Invoke();
+        yield return new WaitUntil( () => !CRRunning);
         ReachDestAct.Action.Invoke();
         
     }
 
     public IEnumerator Rotate()
     {
+        scale = 1;
         CRRunning = true;
         _rotation = target.trans.rotation;
-        while (!CheckRot(.5f))
+        while (!CheckRot(1f))
         {
-            transform.rotation = Quaternion.Lerp(transform.rotation, _rotation, rotatespeed * Time.deltaTime);
+            transform.rotation = Quaternion.Lerp(transform.rotation, _rotation, rotatespeed * Time.deltaTime * scale);
+            scale += .1f;
             yield return new WaitForFixedUpdate();
         }
         CRRunning = false;
@@ -127,21 +137,26 @@ public class Character_Movement_JoystickConf : MonoBehaviour
 
     public IEnumerator Walk()
     {
+        scale = 1;
         CRRunning = true;
         _destination = target.trans.position;
-        _destination.y = transform.position.y;
-        while (!ReachedDestination.value && 
-               (((transform.position.x > _destination.x + .1f) || (transform.position.x < _destination.x - .1f)) 
-                || ((transform.position.z > _destination.z + .1f) || (transform.position.z < _destination.z - .1f))))
+        Debug.Log(transform.position + " " + _destination);
+        while (!ReachedDestination.value &&
+               (((transform.position.x > _destination.x + .1f) || 
+                  (transform.position.x < _destination.x - .1f)) 
+                || ((transform.position.z > _destination.z + .1f) || 
+                    (transform.position.z < _destination.z - .1f))))
         {
-            transform.position = Vector3.Lerp(transform.position, _destination, walkspeed * Time.deltaTime);
+            transform.position = Vector3.Lerp(transform.position, _destination, walkspeed * Time.deltaTime*scale);
+            scale += .005f;
+            if(!_controller.isGrounded)
+                _current.Movement.y -= _current.Gravity.Value * Time.deltaTime;
+            _current.Move(transform, _controller, MainCamera);
             yield return new WaitForFixedUpdate();
         }
         SetPosition();
         CRRunning = false;
-    }
-    
-        
+    }    
     
     private bool CheckRot(float offset)
     {

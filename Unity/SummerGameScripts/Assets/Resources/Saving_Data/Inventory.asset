@@ -15,3 +15,5 @@ MonoBehaviour:
   Objects: {fileID: 11400000, guid: 912b2f5202dfe6e49aec4f66510e3c22, type: 2}
   Notes: {fileID: 11400000, guid: e19f47d7892c911479ecd01ad5fe4b7a, type: 2}
   Keys: {fileID: 11400000, guid: 2477c5e2564288b458894d02f5da2ae4, type: 2}
+  DetectiveNotes: {fileID: 11400000, guid: 8490bc1b5fca5604c90d2474856f3f40, type: 2}
+  hasItem: {fileID: 11400000, guid: 09b4fbe58cae1ab4ca35e6dbdf52f046, type: 2}

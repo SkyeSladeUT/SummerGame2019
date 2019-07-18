@@ -13,7 +13,7 @@ public class Inventory_Dialouge : MonoBehaviour
     private bool ConvStart, SpeedUp, inRange;
     private int _char;
     private string _text_to_display;
-    public UnityEvent OnInteract;
+    public UnityEvent OnInteract, OnEnd;
     
 
     private void Start()
@@ -27,7 +27,9 @@ public class Inventory_Dialouge : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
+        {
             inRange = true;
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -41,7 +43,6 @@ public class Inventory_Dialouge : MonoBehaviour
         if (inRange && !ConvStart && Interact.KeyDown())
         {
             OnInteract.Invoke();
-            StartConv();
         }
     }
 
@@ -62,7 +63,6 @@ public class Inventory_Dialouge : MonoBehaviour
         {
             if (Interact.KeyDown())
             {
-                Debug.Log("Speed");
                 SpeedUp = true;
             }
             yield return new WaitForFixedUpdate();
@@ -74,6 +74,8 @@ public class Inventory_Dialouge : MonoBehaviour
     {
         _char = 0;
         Character_Text.text = "";
+        Dialouge_Text.text = "";
+        _text_to_display = "";
         while (_char < dialouge.Length)
         {
             _text_to_display += dialouge[_char];
@@ -92,10 +94,18 @@ public class Inventory_Dialouge : MonoBehaviour
             }    
         }
         yield return new WaitUntil(Interact.KeyDown);
+        ConvStart = false;
         SpeedUp = false;
         Dialouge_Text.text = "";
         Character_Text.text = "";
-        Dialouge_Object.SetActive(false);
-        Destroy(gameObject);
+        OnEnd.Invoke();
+        //Dialouge_Object.SetActive(false);
+        //Destroy(gameObject);
     }
+
+    public void EndDialogue()
+    {
+        Dialouge_Object.SetActive(false);
+    }
+
 }

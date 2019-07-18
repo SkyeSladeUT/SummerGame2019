@@ -147,7 +147,37 @@ ModelImporter:
     7400012: Talking
     9500000: //RootNode
     13700000: Cat_GEO
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body
+    second: {fileID: 2100000, guid: 8649048bbbf98fd4a9ce34c6601e6900, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Clothes1
+    second: {fileID: 2100000, guid: bafb244a882a6bd43af27417ec1d6fbc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HeadandTail
+    second: {fileID: 2100000, guid: a2cfb4a297b31e247a1e6beac6fddc58, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shirt
+    second: {fileID: 2100000, guid: f5562729b6a91b24db835227a434bfb1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shoes
+    second: {fileID: 2100000, guid: eb63817b46d07054c941951671ce966e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pants
+    second: {fileID: 2100000, guid: 51196b42236fa8d4fbe80f19891460ba, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

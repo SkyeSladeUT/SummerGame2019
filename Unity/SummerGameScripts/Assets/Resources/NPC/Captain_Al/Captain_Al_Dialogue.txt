@@ -1,0 +1,18 @@
+0#
+Captain Al@
+ ^
+~Hey there! What are you doing here?<
+
+Me@
+ ^
+~I need to get some apples for Rose<
+
+Captain Al@
+ ^
+~Oh great timing Carl is unloading the boat now.<
+
+Me@
+ ^
+~Great, I'll go talk to him.>
+%
+

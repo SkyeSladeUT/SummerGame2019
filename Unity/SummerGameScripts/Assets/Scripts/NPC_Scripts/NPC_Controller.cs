@@ -2,6 +2,8 @@
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
+using UnityEngine.Experimental.PlayerLoop;
+using UnityEngine.Experimental.U2D;
 
 public class NPC_Controller : MonoBehaviour
 {
@@ -11,11 +13,12 @@ public class NPC_Controller : MonoBehaviour
     public GameObject Player;
     public StringData MovementType;
     public Animator anim;
-    private float x, z;
+    private float x, z, angle;
     private bool reached_dest, rotate_dest;
     public ActionObject Reach_Dest;
     private Quaternion FacingDirection;
-    public float rotateSpeed;
+    //public float rotateSpeed, walkspeed;
+    public FloatData rotateSpeed, walkspeed;
 
     private void Start()
     {
@@ -27,6 +30,7 @@ public class NPC_Controller : MonoBehaviour
 
     public void Move()
     {
+        
         anim.ResetTrigger("Idle");
         FacingDirection = Destination01.trans.rotation;
         reached_dest = false;
@@ -35,6 +39,7 @@ public class NPC_Controller : MonoBehaviour
         anim.SetTrigger("Walk");
         if(_agent ==  null)
             _agent = GetComponent<NavMeshAgent>();
+        _agent.speed = walkspeed.value;
         StartCoroutine(MovementType.value);
     }
 
@@ -58,7 +63,7 @@ public class NPC_Controller : MonoBehaviour
             }
             while (!CheckRot(5) && MovementType.value == "RandomWalkBetween")
             {
-                transform.rotation = Quaternion.Lerp(transform.rotation, FacingDirection, rotateSpeed * Time.deltaTime);
+                transform.rotation = Quaternion.Lerp(transform.rotation, FacingDirection, rotateSpeed.value * Time.deltaTime);
                 yield return new WaitForFixedUpdate();
             }
             anim.ResetTrigger("Walk");
@@ -78,7 +83,7 @@ public class NPC_Controller : MonoBehaviour
             target = transform.position;
             target.x = Player.transform.position.x;
             _agent.destination = target;
-            while (CheckDest(.1f))
+            while (!CheckDest(.1f))
             {
                 anim.ResetTrigger("Walk");
                 anim.SetTrigger("Idle");
@@ -126,6 +131,25 @@ public class NPC_Controller : MonoBehaviour
         }
     }
 
+    private IEnumerator LookAtPlayer()
+    {
+        anim.ResetTrigger("Walk");
+        anim.SetTrigger("Idle");
+        rotate_dest = false;
+        target = Player.transform.position;
+        target = (target - transform.position).normalized;
+        FacingDirection = Quaternion.LookRotation(target);
+        while (!CheckRot(.1f) && MovementType.value == "LookAtPlayer")
+        {
+            transform.rotation = Quaternion.Lerp(transform.rotation, FacingDirection, rotateSpeed.value * Time.deltaTime);
+            yield return new WaitForFixedUpdate();
+        }
+        Debug.Log("Reached Destination");
+        anim.ResetTrigger("Walk");
+        anim.SetTrigger("Idle");
+        //Reach_Dest.Action.Invoke();
+    }
+
     private IEnumerator GoToPlayer()
     {
         anim.ResetTrigger("Idle");
@@ -140,7 +164,7 @@ public class NPC_Controller : MonoBehaviour
         }
         while (!CheckRot(5) && MovementType.value == "GoToPlayer")
         {
-            transform.rotation = Quaternion.Lerp(transform.rotation, FacingDirection, rotateSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.Lerp(transform.rotation, FacingDirection, rotateSpeed.value * Time.deltaTime);
             yield return new WaitForFixedUpdate();
         }
         Debug.Log("Reached Destination");
@@ -165,7 +189,7 @@ public class NPC_Controller : MonoBehaviour
         while (!CheckRot(5) && MovementType.value == "GoToDest")
         {
             //Debug.Log(transform.rotation.y + " " + FacingDirection.y);
-            transform.rotation = Quaternion.Lerp(transform.rotation, FacingDirection, rotateSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.Lerp(transform.rotation, FacingDirection, rotateSpeed.value * Time.deltaTime);
 
             yield return new WaitForFixedUpdate();
         }
@@ -219,5 +243,9 @@ public class NPC_Controller : MonoBehaviour
             return false;
         }
     }
-    
+
+    private void ResetTarget()
+    {
+        target = Destination01.trans.position;
+    }
 }

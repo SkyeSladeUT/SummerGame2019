@@ -6,10 +6,11 @@ using UnityEngine.Events;
 public class OnTriggerWIthPLayerEvent : MonoBehaviour
 {
     public UnityEvent EnterEvent, ExitEvent, StayEvent;
+    public string tagtocompare = "Player";
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag(tagtocompare))
         {
             EnterEvent.Invoke();
         }
@@ -17,7 +18,7 @@ public class OnTriggerWIthPLayerEvent : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag(tagtocompare))
         {
             StayEvent.Invoke();
         }
@@ -25,7 +26,7 @@ public class OnTriggerWIthPLayerEvent : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag(tagtocompare))
         {
             ExitEvent.Invoke();
         }

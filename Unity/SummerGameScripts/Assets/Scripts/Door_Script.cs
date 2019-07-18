@@ -14,6 +14,10 @@ public class Door_Script : MonoBehaviour
     
         public void OpenCloseDoor()
         {
+            if (anim == null)
+            {
+                anim = GetComponent<Animator>();
+            }
             if (IsOpen.value)
             {
                 IsOpen.value = false;

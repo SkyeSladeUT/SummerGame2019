@@ -13,7 +13,7 @@ public class Joystick_Move_Pattern : ScriptableObject
     Quaternion TargetRotation;
     Transform cam;
     private Transform transform;
-    private Vector3 Movement;
+    public Vector3 Movement;
  
     public void Move(Transform trans, CharacterController controller, Transform MainCam)
     {

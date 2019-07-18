@@ -1,0 +1,28 @@
+0 - Call Over#
+Rose@
+ ^
+~Sonny, can you come over here?>
+
+
+1 - Ask for Apples#
+Rose@
+ ^
+~Hi Sonny, can you please go down to the docks today and pick me up some apples?+
+ ^
+Carl told me there would be a new fruit shipment today!+
+ ^
+I am going to make an apple pie today but my hips don't work like they use to..."<
+
+Me@
+ ^
+~Sure Rose!>
+
+2 - Give Rose Apples#
+Me@
+1^
+~Here's your apples Rose.<
+
+Rose@
+ ^
+~Thanks Sonny.>
+%

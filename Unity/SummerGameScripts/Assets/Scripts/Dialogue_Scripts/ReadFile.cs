@@ -71,7 +71,6 @@ public class ReadFile : ScriptableObject
             break;
           case '>':
             //end conversation
-            //Debug.Log("EndConv");
             _charaConversation.Add(_characterspara);
             _characterspara = new List<string>();
             reactionspara.Add(reactionsline);

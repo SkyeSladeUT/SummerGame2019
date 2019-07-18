@@ -1,0 +1,88 @@
+0 - Help fixing air conditioning#
+Me@
+ ^
+~Hey, what's up?<
+
+Ice Cream Worker@
+ ^
+~The air conditioning for the building isn't working and I can't open the shop until it's fixed.<
+
+Me@
+ ^
+~I'll see what I can do.<
+
+Ice Cream Worker@
+ ^
+~Thanks>
+
+1 - Thanks#
+Ice Cream Worker@
+ ^
+~Thanks again for the help with the air. Ice cream and heat don't really work well together.<
+
+Me@
+ ^
+~No problem, just happy to help.>
+
+2 - Talk#
+Ice Cream Worker@
+ ^
+~What can I do for you, detective?{<
+
+~Information+
+Back Room+
+Leave>
+
+3 - Info#
+Me@
+ ^
+~I'm investigating what might have caused Carl's illness. Do you know of anything or one that might be related?<
+
+Ice Cream Worker@
+ ^
+~Well... info about town or something>
+
+4 - Keys#
+Me@
+ ^
+~Can I check out the back room?<
+
+Ice Cream Worker@
+ ^
+~Of Course, except I left the keys to the room somewhere in the library.+
+ ^
+If you find them, you're welcome to check the room out.<
+
+Me@
+ ^
+~Great, I'll look for them.>
+
+5 - Leave#
+Me@
+ ^
+~I've got to get back to my investigation. I'll be back if I have any more questions.<
+
+Ice Cream Worker@
+ ^
+~Of course, I'll be here when you come back.>
+
+6 - Got Shop Keys#
+ ^
+Me@
+ ^
+~I've got your keys.<
+
+ @
+1^
+~You hand over the keys.<
+
+Ice Cream Worker@
+ ^
+~Thanks. I'll go open it for you right now.>
+
+7 - Fixed Air Conditioning#
+Ice Cream Worker@
+ ^
+~Hey, it's running again! Whatever you did fixed it. I'm going to open the shop, you're welcome to come in.>
+
+%

@@ -16,7 +16,7 @@ public class dialouge_script : MonoBehaviour
     private string _text_to_display;
     public ActionObject EndDialouge;
     public UnityEvent OnInteract, OnChoiceSelectStart;
-    public UnityEvent Mad, Happy, Surprised, Sad, Normal;
+    public UnityEvent Mad, Happy, Surprised, Upset, Scared, Normal, HandOverItem, GetItem, StopConv;
     private char _choice_char;
     public BoolData choiceselection;
     public List<StringData> ChoiceOptions;
@@ -56,12 +56,13 @@ public class dialouge_script : MonoBehaviour
         if (inRange && !ConvStart && Interact.KeyDown() && !choiceselection.value)
         {
             OnInteract.Invoke();
-            StartConv();
+            //StartConv();
         }
     }
 
     public void StartConv()
     {
+        Debug.Log("Start");
         if (!ConvStart && !choiceselection.value){
             ConvStart = true;
         Dialouge_Object.SetActive(true);
@@ -206,8 +207,8 @@ public class dialouge_script : MonoBehaviour
 
     private void RunReaction()
     {
-        Debug.Log("Reaction");
-        Debug.Log(character.Script.Reactions[_conNum][paragraph][line][1]);
+        //Debug.Log("Reaction");
+        //Debug.Log(character.Script.Reactions[_conNum][paragraph][line][1]);
         if (line >= character.Script.Reactions[_conNum][paragraph].Count)
             return;
         switch (character.Script.Reactions[_conNum][paragraph][line][1])
@@ -224,8 +225,24 @@ public class dialouge_script : MonoBehaviour
             case 'H':
                 Happy.Invoke();
                 break;
+            case 'F':
+                Scared.Invoke();
+                break;
+            case 'U':
+                Upset.Invoke();
+                break;
+            case '1':
+                HandOverItem.Invoke();
+                break;
+            case '2':
+                GetItem.Invoke();
+                break;
+            case '3':
+                ConvStart = false;
+                StopConv.Invoke();
+                break;
             default:
-                Debug.Log("None");
+                //Debug.Log("None");
                 break;
             
         }

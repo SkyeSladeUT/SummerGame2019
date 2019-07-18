@@ -5,7 +5,7 @@ using UnityEngine;
 public class Sprint_script : MonoBehaviour
 {
     public KeyCodeData Sprint_Keys;
-    public BoolData inControl;
+    public BoolData inControl, Can_Run;
     private Animator Anim;
 
     private void Start()
@@ -15,9 +15,9 @@ public class Sprint_script : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(Sprint_Keys.KeyDown() && inControl.value)
+        if(Sprint_Keys.KeyDown() && inControl.value && Can_Run.value)
             Anim.SetTrigger("Run_Control");
-        else if (Sprint_Keys.KeyUp() && inControl.value)
+        else if (Sprint_Keys.KeyUp() && inControl.value && Can_Run.value)
             Anim.SetTrigger("Walk_Control");
     }
 }
