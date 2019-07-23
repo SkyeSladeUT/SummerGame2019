@@ -30,4 +30,12 @@ public class Multiple_Bool_Check : MonoBehaviour
             IfFalse.Invoke();
         }
     }
+
+    public void Resetbools()
+    {
+        foreach (var b in Bools)
+        {
+            b.value = false;
+        }
+    }
 }

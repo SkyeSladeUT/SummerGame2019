@@ -11,6 +11,7 @@ TagManager:
   - Puzzle
   - ViewSpot
   - Pushable
+  - Material_Change
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - ParticleEffect
   - IgnoreNavMesh
   - Slider
-  - 
+  - Change_Mat
   - 
   - 
   - 

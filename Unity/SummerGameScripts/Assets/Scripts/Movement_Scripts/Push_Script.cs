@@ -9,7 +9,22 @@ public class Push_Script : MonoBehaviour
     public float pushAmount, pushSpeed;
     private float time, scale;
     private bool _crrunning = false;
+    public BoolData isGrabbing;
 
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Pushable"))
+        {
+            isGrabbing.value = true;
+        }
+        
+    }
+
+    private void OnTriggerExit (Collider other)
+    {
+        isGrabbing.value = false;
+    }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
@@ -21,13 +36,14 @@ public class Push_Script : MonoBehaviour
                     return;
                 if (Push_Keys.KeyHold())
                 {
+                    
                     time = 5;
                     scale = 1;
                     _direction = GetDirection(transform.rotation.eulerAngles.y);
                     _position = hit.gameObject.transform.position;
                     _position.x += _direction.x * pushAmount;
                     _position.z += _direction.z * pushAmount;
-                    if(!_crrunning)
+                    if (!_crrunning)
                         StartCoroutine(Push(hit.gameObject));
                 }
             }

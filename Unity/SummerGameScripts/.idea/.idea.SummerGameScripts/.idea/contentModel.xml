@@ -5,6 +5,23 @@
     <e p="E:\School\College\Summer2019\ProjectMangagementSummer2019\Unity Project\SummerGameScripts" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Material" t="Include">
+          <e p="Maze" t="Include">
+            <e p="Alpha_Change.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Michael_Stuff" t="Include">
+          <e p="Assets" t="Include">
+            <e p="Buildings" t="Include">
+              <e p="Skybox_import" t="Include">
+                <e p="Fantasy Skybox FREE" t="Include">
+                  <e p="Fog and Ambient references.txt" t="Include" />
+                  <e p="Readme.txt" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="packages" t="Include">
           <e p="NavMeshComponents" t="Include">
             <e p="Editor" t="Include">
@@ -100,6 +117,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Book_Animator.cs" t="Include" />
           <e p="Camera" t="Include">
             <e p="Camera_Controller.cs" t="Include" />
             <e p="Camera_Switch.cs" t="Include" />
@@ -140,6 +158,7 @@
             <e p="Mouse_Events.cs" t="Include" />
             <e p="OnTriggerWIthPLayerEvent.cs" t="Include" />
           </e>
+          <e p="Face_Swap.cs" t="Include" />
           <e p="Game_Manager_Cafe.cs" t="Include" />
           <e p="Input_Text.cs" t="Include" />
           <e p="Inventory" t="Include">
@@ -185,8 +204,10 @@
           <e p="Mutiple_Action_Modifier.cs" t="Include" />
           <e p="NPC_Scripts" t="Include">
             <e p="NPC_Controller.cs" t="Include" />
+            <e p="StandardShaderUtils.cs" t="Include" />
           </e>
           <e p="Puzzles" t="Include">
+            <e p="Antidote_Game_Manager.cs" t="Include" />
             <e p="Geometry_Puzzle" t="Include">
               <e p="Match_Script.cs" t="Include" />
               <e p="Name_ID.cs" t="Include" />
@@ -211,13 +232,16 @@
             </e>
             <e p="Sliding_Game.cs" t="Include" />
           </e>
+          <e p="Reset_Game.cs" t="Include" />
           <e p="Scriptable_Object_Holder.cs" t="Include" />
           <e p="Scriptable_Object_Saving.cs" t="Include" />
           <e p="Show_Text.cs" t="Include" />
+          <e p="Timer_Display.cs" t="Include" />
           <e p="UnityEvent_List_Script.cs" t="Include" />
           <e p="Wait_Event.cs" t="Include" />
         </e>
         <e p="Test.cs" t="Include" />
+        <e p="TriggerReset.cs" t="Include" />
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="NavMeshComponents.csproj" t="IncludeRecursive" />

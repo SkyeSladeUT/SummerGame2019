@@ -137,6 +137,69 @@ public class Inventory : ScriptableObject
         }
        
     }
+
+    public bool HasItemReturn(Item item)
+    {
+        if (item.itemType == "Object")
+        {
+            foreach (var OBJ in Objects.objList)
+            {
+                if (OBJ == item)
+                {
+                    Debug.Log("HasItem");
+                    return true;
+                }
+                
+            }
+
+            return false;
+        }
+        else if (item.itemType == "Note")
+        {
+            foreach (var note in Notes.objList)
+            {
+                if (note == item)
+                {
+                    Debug.Log("HasItem");
+                    return true;
+                }
+                
+            }
+
+            return false;
+        }
+        else if (item.itemType == "Key")
+        {
+            foreach (var key in Keys.objList)
+            {
+                if (key == item)
+                {
+                    Debug.Log("HasItem");
+                    return true;
+                }
+            }
+
+            return false;
+        }
+        else if (item.itemType == "Hint")
+        {
+            Debug.Log("Check Hint");
+            foreach (var hint in DetectiveNotes.objList)
+            {
+                if (hint == item)
+                {
+                    return true;
+                }
+                
+            }
+
+            return false;
+        }
+        else
+        {
+            return false;
+        }
+    }
     
     
     

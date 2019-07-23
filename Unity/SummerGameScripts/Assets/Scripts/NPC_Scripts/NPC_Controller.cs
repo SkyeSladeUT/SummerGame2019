@@ -27,12 +27,21 @@ public class NPC_Controller : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
     }
 
-
+    public void Transport(Transform pos)
+    {
+        transform.position = pos.position;
+        transform.rotation = pos.rotation;
+    }
+    
     public void Move()
     {
         
         anim.ResetTrigger("Idle");
-        FacingDirection = Destination01.trans.rotation;
+        if (Destination01 != null )
+        {
+            FacingDirection = Destination01.trans.rotation;
+        }
+
         reached_dest = false;
         if(anim == null)
             anim = GetComponentInChildren<Animator>();
