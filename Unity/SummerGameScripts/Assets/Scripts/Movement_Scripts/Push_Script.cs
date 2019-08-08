@@ -10,20 +10,31 @@ public class Push_Script : MonoBehaviour
     private float time, scale;
     private bool _crrunning = false;
     public BoolData isGrabbing;
+    public AudioSource pushsound;
+
+    private void Start()
+    {
+        pushsound = GetComponent<AudioSource>();
+    }
 
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Pushable"))
         {
-            isGrabbing.value = true;
+            //Debug.Log("Pushable");
+            objectrb = other.GetComponent<Rigidbody>();
+            
         }
         
     }
 
     private void OnTriggerExit (Collider other)
     {
+        //Debug.Log("Leave");
         isGrabbing.value = false;
+        objectrb = null;
+        pushsound.Stop();
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
@@ -31,13 +42,14 @@ public class Push_Script : MonoBehaviour
         //Debug.Log("hit");
             if (hit.gameObject.CompareTag("Pushable"))
             {
+                isGrabbing.value = true;
+                //Debug.Log("Hit");
                 objectrb = hit.collider.attachedRigidbody;
                 if (objectrb == null || objectrb.isKinematic)
                     return;
                 if (Push_Keys.KeyHold())
-                {
-                    
-                    time = 5;
+                {     
+                    //time = 5;
                     scale = 1;
                     _direction = GetDirection(transform.rotation.eulerAngles.y);
                     _position = hit.gameObject.transform.position;
@@ -52,15 +64,16 @@ public class Push_Script : MonoBehaviour
     private IEnumerator Push(GameObject obj)
     {
         _crrunning = true;
-        while (time > 0)
+        pushsound.Play();
+        while (isGrabbing.value)
         {
             obj.transform.position = Vector3.Lerp(obj.transform.position, _position,
                 pushSpeed * Time.deltaTime * scale);
-            time -= Time.deltaTime;
+            //time -= Time.deltaTime;
             scale -= Time.deltaTime;
             yield return new WaitForFixedUpdate();
         }
-
+        pushsound.Stop();
         _crrunning = false;
     }
 

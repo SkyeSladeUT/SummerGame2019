@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Cal_Movement_Type
   m_EditorClassIdentifier: 
   value: GoToDest
-  prevvalue: GoToDest
+  prevvalue: FollowPlayer
   LengthMax: 1000

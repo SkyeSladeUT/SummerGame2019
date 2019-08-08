@@ -5,7 +5,7 @@ using UnityEngine;
 public class Face_Swap : MonoBehaviour
 {
     public Material HeadMat;
-    public Texture HappyCol, NormalCol, AngryCol;
+    public Texture HappyCol, NormalCol, AngryCol, WorriedCol;
 
     public void Happy()
     {
@@ -20,6 +20,11 @@ public class Face_Swap : MonoBehaviour
     public void Normal()
     {
         HeadMat.SetTexture("_MainTex" , NormalCol);
+    }
+
+    public void Upset()
+    {
+        HeadMat.SetTexture("_MainTex" , WorriedCol);
     }
     
 }

@@ -151,5 +151,37 @@ Cafe Owner@
  ^
 ~Of course>
 
+11 - Ask About Ice Cream#
+Me@
+ ^
+~Hey, weren't you just at the Ice Cream Shop?<
+
+Cafe Owner@
+ ^
+~No that was my brother Leroy.<
+
+Me@
+ ^
+~Hmmm...<
+
+Cafe Owner@
+ ^
+~Yeah, I get that a lot.>
+
+12 - Ask About Library#
+Me@
+ ^
+~How did you get here from the library so quickly?<
+
+Cafe Owner@
+ ^
+~I wasn't at the library... wait you must be talking about my brother Elron.<
+
+Me@
+ ^
+~Yeah, sure...>
+
+
+
 
 %

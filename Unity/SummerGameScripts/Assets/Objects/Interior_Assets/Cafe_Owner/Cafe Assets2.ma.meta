@@ -179,6 +179,7 @@ ModelImporter:
     4300048: polySurface2
     4300050: pCylinder6
     4300052: pCylinder7
+    2186277476908879412: ImportLogs
   externalObjects:
   - first:
       type: UnityEngine:Material

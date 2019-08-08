@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objList:
   - {fileID: 11400000, guid: f55574198ae4bab44a1869a759bfef81, type: 2}
+  - {fileID: 11400000, guid: 57f1a261be28e7345acbd07d90d11999, type: 2}

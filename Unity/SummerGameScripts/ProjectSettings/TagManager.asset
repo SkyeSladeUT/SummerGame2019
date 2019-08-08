@@ -12,6 +12,7 @@ TagManager:
   - ViewSpot
   - Pushable
   - Material_Change
+  - Block
   layers:
   - Default
   - TransparentFX
@@ -29,8 +30,8 @@ TagManager:
   - IgnoreNavMesh
   - Slider
   - Change_Mat
-  - 
-  - 
+  - Blocks
+  - Ligthing
   - 
   - 
   - 

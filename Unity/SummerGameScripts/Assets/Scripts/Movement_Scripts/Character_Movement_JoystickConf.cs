@@ -36,7 +36,11 @@ public class Character_Movement_JoystickConf : MonoBehaviour
         _current.Move(transform, _controller, MainCamera);
     }
 
-
+    public void Transport(Transform transformpos)
+    {
+        transform.position = transformpos.position;
+        transform.rotation = transformpos.rotation;
+    }
 
     public void DisableCC()
     {
@@ -101,6 +105,7 @@ public class Character_Movement_JoystickConf : MonoBehaviour
 
     public void TurnTowards()
     {
+        Debug.Log("Rotate");
         walkspeed = 0;
         rotatespeed = RotationFloat;
         _rotation = target.trans.rotation;
